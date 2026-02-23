@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// premitiv(stack) & nonpremitive(Heap) -> memory regarding concepts che je dekhade chre ke memory ma aa badhu kai rite store thy che
+ 
+      // ++++++++++++++ primitive (stack) ++++++++++++++
+        let myYoutubeChannel = "dhruvmakwanadotcom"
+        let anotherchannel = myYoutubeChannel ;
+        console.log(myYoutubeChannel);
+        console.log(anotherchannel);
+/* ahiya stack lagu pde che mtlb myYoutubeChannel nam nu variable banvyu jeni value  anotherchannel ma store kari to aa je nava variable ma juna
+ni value store kari ae as a copy j gai mtlb ke aa myYoutubeChannel ni copy bani ane anotherchannel ma store thy ane have banne ni values print
+karavata same j ave mtlb dhruvmakwanadotcom have joo fist variable ni copy j second ma pass thati hoy to copy ma karelo ferfar original ma 
+na j dekhade ae vat to obviosly j che ne*/
+
+
+
+
+        // ++++++++++++++ non-premitive (Heap) ++++++++++++++
+        let userOne = {
+            email : "user@gmail.com",
+            upi : "upi@okicici"
+        };
+
+        let userTwo = userOne 
+        userTwo.email = "dhruv1757@gmail.com"
+
+        console.log(userOne.email);
+        console.log(userTwo.email);
+
+        console.log(userOne)
+        
+/*ahi userOne variable declare karyo pachi bijo declare karyo jenu name userTwo che jeni value userOne thi leva ma avi che to pela primitive
+vada case ma evu thatu ke second variable ma first ni value leava ma vti pan te as a copy j avti pan ahi su thy che ke userTwo ni value
+useOne ma thi leva ma ave che as a reference matlb apde original object ma cahnge kari sakvi chiae */
+    </script>
+</body>
+</html>

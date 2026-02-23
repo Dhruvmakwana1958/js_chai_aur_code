@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let name = "dhruv makwana"
+        console.log(name[0]);
+
+
+        let newname = new String('dhruv') // navi rit che aa su kare sring ne as a object treat kare
+        console.log(typeof newname); //object
+        console.log(newname); 
+//but aa navi rite declre karyu string kari ne je apde karyu che te string ne object banava je thi apde tene lagtti method ne 
+ //use kari shakay pan avu karvu avoid j karvu kem ke modern js ma aa vastu bydefault change thy j jay che matlb as a object convert thy jay 
+
+        console.log(newname.__proto__); // to declaare prototype
+        console.log(name.split("")); // ['d', 'h', 'r', 'u', 'v', ' ', 'm', 'a', 'k', 'w', 'a', 'n', 'a']
+        console.log(name.split(" ")); // ['dhruv', 'makwana']
+
+        const a = new Array(1 , 55 , 56);
+        console.log(a.__proto__)     
+
+       
+
+
+    </script>
+</body>
+</html>

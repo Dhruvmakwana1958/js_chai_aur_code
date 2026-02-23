@@ -10,6 +10,7 @@
 
     <script>
       let Name = "Dhruv Makwana";
+      let newscore = "23"
       let price = 99.2;
       let isPass = true;
       let a = null;
@@ -19,6 +20,36 @@
       console.log(typeof Name);
       console.log(x);
       console.log(typeof a);
+
+      console.table([Name , price , isPass])
+
+      let valInString = String(price); // type conversion num to string
+      console.log(typeof(valInString));
+
+      valinNumber = Number(newscore); // type convirsion string to num
+      console.log(typeof valinNumber);
+
+      price =  50
+      console.log(price)
+
+      let unum = "23abc"
+      let uniquenum = Number(unum);
+      console.log(typeof uniquenum); // number
+      console.log(uniquenum);        // NaN
+
+      let nulx = String(a);
+      console.log(nulx);
+/* convirsion              val
+      "33"                number
+    "33abc"                NaN
+    true ,false           1 , 0
+      null                  0  
+   undefined               NaN
+
+   // note :- typeof thi je te conversion allow karyuu hoy te j ave i mean Number karyu hoy to number ane String karyu hoy to string ave
+
+
+*/
 
 
       var age = 89;
