@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #letdiv{
+            height: 100px;
+            width: 100px;
+            background-color: khaki;
+            color:mediumslateblue;
+            border: 3px double black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="btn1">click me</button>
+    <div id="letdiv">yaha aaoo!</div>
+
+    <script>
+
+        //inline karel event hendle ane java script ma kreli banne ma javascript ni priority vadhu che melt js vadi j run thase
+        let btn1 = document.querySelector("#btn1");
+        let a = 1
+        btn1.onclick = () => {
+            console.log("button was clicked")
+            console.log(a)
+            a++
+
+            
+/*🟢 Case 1: Function ke andar
+btn1.onclick = () => {
+    let a = 1;
+    console.log(a);
+    a++;
+}
+
+Yaha kya ho raha hai?
+Har baar jab aap click karte ho:
+Function run hota hai
+let a = 1 naya variable banata hai
+Console me 1 print hota hai
+a++ hota hai
+Function khatam → variable destroy ho jata hai
+Phir next click pe phir se:
+👉 naya a = 1
+Isliye value store nahi ho rahi.
+
+🟢 Case 2: Function ke bahar
+let a = 1;
+
+btn1.onclick = () => {
+    console.log(a);
+    a++;
+}
+
+
+Ab kya ho raha hai?
+a sirf ek hi baar ban raha hai.
+Har click pe wahi same variable use ho raha hai.
+Wo destroy nahi ho raha.
+Isliye value continue badh rahi hai.
+
+Function ke andar bana variable temporary hota hai.
+Function ke bahar bana variable permanent (jab tak page reload na ho).
+*/
+        } ;
+    let newdiv = document.querySelector("#letdiv");
+    
+    newdiv.onmouseover = () =>{
+        console.log("bss ho gya")
+    }
+
+
+    </script>
+</body>
+
+</html>

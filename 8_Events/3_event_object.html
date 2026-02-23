@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #letdiv{
+            height: 100px;
+            width: 100px;
+            background-color: khaki;
+            color:mediumslateblue;
+            border: 3px double black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="btn1">click me</button>
+    <div id="letdiv">yaha aaoo!</div>
+
+    <script>
+
+        let btn1 = document.querySelector("#btn1");
+        let a = 1
+        btn1.ondblclick = (evt) => {
+            console.log(evt);
+            console.log(evt.type);
+            console.log(evt.target);
+            console.log(evt.clientX , evt.clientY);
+            
+
+
+
+} ;
+   
+
+
+    </script>
+</body>
+
+</html>

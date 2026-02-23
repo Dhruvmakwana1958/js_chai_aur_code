@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const countVovels = (str) =>{
+            let vovels = "aeiou"
+            let count = 0 ;
+            let foundVovels = []
+            for(let ch of str.toLowerCase()){
+                if(vovels.includes(ch)){
+                    foundVovels.push(ch) ;
+                    count++ ;
+                }
+            }
+            console.log(`the count of the vovels is = ${count}`);
+            console.log(`those vovels is ${foundVovels.join("| ")}`);
+        }
+    </script>
+</body>
+</html>

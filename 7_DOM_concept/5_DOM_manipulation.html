@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3 style="visibility: hidden;"><i>Fruits</i></h3>
+        <ul>
+            <li>mango</li>
+            <li>Orange</li>
+            <li>kiwi</li>
+        </ul>
+    </div>
+
+    <script>
+        let _1vari = document.querySelector("div") //returns tag name
+        console.dir(_1vari.tagName);
+        console.log(_1vari);
+
+
+        let _2vari = document.querySelector("div") 
+        console.dir(_2vari.innerText); //returns only strings pan je te tag anadr ni badh j string return kare evu ny ke fakt tena child ni j 
+        // return kre
+
+        let _3vari = document.querySelector("div") 
+        console.dir(_3vari.innerHTML); // it is also returns strings with html tags
+
+        let fchild = document.querySelector("div").firstChild ;
+        console.dir(fchild);
+
+/*Property	         Kya Return Karega
+firstChild	           Text / Comment / Element
+firstElementChild	     Sirf element
+children[0]	             Sirf element */ 
+           // ahi firstchild h3 tag avo joi pan text ave che jenu karan che DOM sav thi pela as a textt le che pachi bija ma tag jenu example
+//2_2DOM vada ma apelu che jenu output joi levu to have h3 as a firstchild taike accece karva mate
+
+        let firchild = document.querySelector("div").firstElementChild; // only element print karava 
+        console.dir(firchild); 
+
+        // OR 
+
+        let firselement = document.querySelector("div").childNodes[1];
+        console.dir(firselement);
+
+        //OR 
+
+        let firsteelement = document.querySelector("div");
+        console.dir(firsteelement.childNodes[1]);
+
+        let myheanding = document.querySelector("h3");
+        myheanding.innerText = "Dhruv"
+
+        let myItalicHeading = document.querySelector("h3");
+        myItalicHeading.innerHTML = "<i> Dhruv Makwana <i/>"
+            
+        let myhidden = document.querySelector("h3"); // it is use for showing hidden content
+        console.dir(myheanding.textContent);    
+        
+
+    
+    </script>
+
+
+</body>
+</html>

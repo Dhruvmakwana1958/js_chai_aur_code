@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+    background-color: palevioletred;
+}
+    </style>
+</head>
+<body>
+     <div>Dhruv Makwana</div>
+    <h1 id="heading" class="heading-class">Dom demo by apna college</h1>
+    <h1 class="heading-class">Karan rathore</h1>
+    <h4 class="heading-class">topic : starter code</h4>
+    <p>Let's Learn about DOM</p>
+    <button>Click me</button>  
+    <script>
+        let heading = document.getElementById("heading");
+        console.log(heading);
+        console.dir(heading); // ahi script tag ne body pachi lakhvo jaruri che kem ke jo aa tag ne apne jo head ma lkyo hot to browser pela js na code ne run karet
+    // ane jo evu that to apde Document vada object ne access na kari saket
+        let headings = document.getElementsByClassName("heading-class");
+        console.log(headings);
+        console.dir(headings);
+
+        let newheading = document.getElementById("newheadings");
+        let newestheading = document.getElementsByClassName("newestheadings");
+
+        console.log(newheading);
+        console.dir(newheading);
+
+        console.log(newestheading);
+        console.dir(newestheading);
+
+        let tagname = document.getElementsByTagName("p");
+        console.dir(tagname);
+        
+
+       
+    </script> 
+</body>
+</html>

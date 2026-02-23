@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*ak sathe 20 student na marks store karva che to ,
+        1]
+        let student1_marks = 89 ;
+        let student2_marks = 50 ;
+        let student3_marks = 90 ;
+        let student4_marks = 75 ;
+        .
+        .
+        this was very stressfull for big amount of students data ane darvakhte alag alag variable declare karva pde che */
+
+        /*
+        2]
+        let marks = {
+            stu1 : 89 ,
+            std2 : 50 ,
+            std3 : 90 , 
+            std4 : 75 ,
+        };
+        aa vastu kari sakay pan ak j ritni value athva related information je same type ni che tene store karva  
+        mate arrays use thy ane obj use nthi thatu enu karan che ke ama pan dar vakhte alag alag variable banava j pde che jem ke stu1 , stu2*/
+
+        /* array is linear collection of items object ma jem key nu name matter kare che ane arrays ma indices matter kare che 
+        jo ke array pan ak object j che kem ke type of array print karavta object j lakhelu dekhadse ane at the end object pan key value form 
+        ma j output ape pan ema aa key ae indices hoy che 
+        ex. 0 : 89
+            1 : 50 
+            2 : 90
+        */
+
+        let marks = [89 , 5 , 90 , 75];
+        console.log(marks);
+        console.log(marks.length); //length ae property che jeno mtlb te koi value aapi de che 
+        //ane method no mtlb te kaik kam karine ape che jem ke string methods je uppercase ma covert kare chr string ne athva replace kare che
+        console.log(typeof(marks));
+
+        console.log(marks[3]);
+
+        // arrays are mutable mtlb je te array ma change posible che unlike string
+        marks[0] = 100;
+        console.log(marks)
+
+        
+        
+
+    </script>
+</body>
+</html>

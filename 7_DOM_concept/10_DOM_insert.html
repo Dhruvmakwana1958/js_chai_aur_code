@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            height: 150px;
+            width: 150px;
+            ;
+            background-color: skyblue;
+            color: white;
+            ;
+            border: 2px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" name="jsds">this is javascript
+        list
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ul>
+    </div>
+    <p class="thisclass"> this is a simple project</p>
+
+    <script>
+        /* insert elements 
+        1) node.apend(el) adds a end of nodes (inside)
+        2) node.prepend(el) adds a start of the node (inside)
+        3)node.before(el) add before the node (outside)
+        4)node.after(el) add after the node (outside)
+        */  
+
+// to insert element first step is to create and second step is to add
+
+        let newbtn = document.createElement("button");
+        newbtn.innerText = "click me!" ;
+        console.log(newbtn); 
+
+        // let div = document.querySelector("div");
+        // div.append(newbtn);
+
+        // let newdiv = document.querySelector("div");
+        // newdiv.prepend(newbtn);
+        
+        let newerdiv = document.querySelector("div");
+        newerdiv.before(newbtn);
+        
+        let newestdiv = document.querySelector("p");
+        newestdiv.after(newbtn);
+
+        let newheading = document.createElement("h2");
+        newheading.innerHTML = "<i>Bharatbhai</i>" ;
+        newheading.style.backgroundColor = "purple";
+
+
+        // let addheading = document.querySelector("div");
+        // addheading.before(newheading); 
+                        //OR
+        document.querySelector("div").before(newheading);
+
+        document.querySelector("p").remove() // to delete the node
+
+        
+        
+    
+        
+    </script>
+
+</body>
+
+</html>

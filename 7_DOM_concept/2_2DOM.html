@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>childNodes vs children</title>
+</head>
+<body>
+
+  <div id="container">
+    
+    <!-- This is a comment -->
+
+    <h2>Heading</h2>
+    
+    Some normal text here
+    
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    
+  </div>
+
+  <script>
+    const box = document.querySelector("div");
+                     // OR
+    // const box = document.getElementById("container")
+
+    console.log("childNodes:", box.childNodes); // badhu j return kare text , coments and tags
+    console.log("children:", box.children); // only tags j return kare
+  </script>
+
+</body>
+</html>

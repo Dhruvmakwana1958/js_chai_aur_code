@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // javascript ma strings ne koi divs change kari sakata nthi string methods no use kari ne navi string banavi sakiae chia orignal string
+        // change thse nhi because that is immutable
+
+        let str = "AngryBirds \t"; 
+        let str2 = "Hello"
+        console.log("1 " ,str.toUpperCase());
+        console.log("2 ",str);
+
+
+        let newStr = str.toUpperCase(); 
+        console.log("3 ",newStr);
+
+        // toLowerCase() //convert into lowercase
+        // str.trim() //remove all white space in starting and ending
+
+        console.log("4 ",str.slice(2 , 5)); //starting index will count but ending index will not counting
+        console.log("5 ",str.concat(str2));
+        // or 
+        console.log("6 ",str + str2)
+
+        console.log("7 ",str.replace("A" , "D")); //pehli var a match thyu enni jgya ae D 1 j var replaace thse biji var ny thay
+        console.log("8 ",str2.replace("lo" , "p"));
+        // but string ma jetla pan a che ae badha ne replace karva mate "replaceAll" no use thy che
+        
+    </script>
+</body>
+</html>

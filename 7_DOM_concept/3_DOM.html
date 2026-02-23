@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Dhruv Makwana</div>
+    <h1 id="heading" class="myclass">Dom demo by apna college</h1>
+    <h1 class="myclass">Karan rathore</h1>
+    <h4 class="myclass">topic : starter code</h4>
+    <p>Let's Learn about DOM</p>
+    <p >2nd paragraph</p>
+    <button id="myid">Click me</button>  
+    
+
+    <script>
+        //query selcetor id , class , tag name badhu j aa ak ma j lakhi shakay alag thi getelementbyid le getelementbyclass e define karvani jarur nthi
+        let firstelements = document.querySelector("p"); // queryselector nodes ni list ape che
+        console.dir(firstelements);
+
+        let allElements = document.querySelectorAll("p");
+        console.dir(allElements);
+
+        // for class
+
+        let forclass = document.querySelector(".myclass")
+        console.log(forclass);
+        let forallclass = document.querySelectorAll(".myclass")
+        console.log(forallclass);
+
+        // for id
+        let forid = document.querySelector("#heading")
+        console.dir(forid);
+        
+
+        
+
+    </script>
+
+</body>
+</html>

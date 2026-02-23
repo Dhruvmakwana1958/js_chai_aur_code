@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*take a number n as input from user , create any array of numbers from 1 to n.
+use a reduce method to calculate sum of all numbers in the araay.
+use the reduce method to calculate product of all numbers in  the array */
+
+    let n = prompt("Enter a number : ");
+    let arr = [] ;
+    for(let i = 1 ; i <= n ; i++){
+        arr[i-1] = i ;
+    };
+    console.log(arr);
+
+    let calSum = arr.reduce((result , current) => {
+        return result + current ;
+    });
+
+    console.log(calSum);
+
+    let calProduct = arr.reduce((prev , current)=>{
+        return prev*current ;
+    });
+
+    console.log(calProduct);
+
+    </script>
+</body>
+</html>

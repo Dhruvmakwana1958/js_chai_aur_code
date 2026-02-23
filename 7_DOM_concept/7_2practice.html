@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height:  100px;
+            width: 100px;
+            border: 2px solid black;
+            margin:  5px ;
+            text-align:  center;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h3>Hello javascript</h3>
+    <div class="box">first div</div>
+    <div class="box">second div</div>
+    <div class="box">third div</div>
+    <div class="box">first div</div>
+    <div class="box">second div</div>
+    <div class="box">third div</div>
+    <div class="box">first div</div>
+    <div class="box">second div</div>
+    <div class="box">third div</div>
+    
+    <script>
+        let inx = 1;
+        let myd = document.querySelectorAll(".box");
+        for(d of myd){
+            d.innerText = `new unique value ${inx}`
+            inx++;
+        }
+    </script>
+</body>
+</html>
