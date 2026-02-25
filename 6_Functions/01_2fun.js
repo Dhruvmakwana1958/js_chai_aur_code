@@ -13,7 +13,8 @@ function handleObject(anyObject){
 
 handleObject({
     name : "sam",
-    price : "5000"
+    price : "5000" ,
+    email : "dhruv@gmail.com"
 })
 
 const newArray = [200 , 400 , 100 , 600]

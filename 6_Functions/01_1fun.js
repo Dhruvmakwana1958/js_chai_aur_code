@@ -4,12 +4,12 @@ const loginUserMessage = function(username="sam"){
         return
         // aa retun lakhvano mtlb ke ani paci nu execute na thy
     }
-    return console.log(`${username} just logged in`)
+    return console.log(`${username} just logged in`) 
 }
 
 loginUserMessage()
 
-// ************************************** ADD TO CART *************************************
+// ************************************** ADD TO CART ****************************************
 
 function calculateCartPrice(...num1){ // ... is rest operator
     return num1
