@@ -1,73 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         // numbers and maths
-        let score = 400 ;
+        let score = 400;
         let balance = new Number(400); // avi rite js ma kai pan declare karo to te as a object j treat thy che pan am karvu jaruri nthi kem ke 
         // by default java script ae ane convert kari j de che object ma etle j to metthod kam kare che aa 
+        /*let a = 400;
+        let b = new Number(400);
+
+        console.log(typeof a); // number (Primitive)
+        console.log(typeof b); // object (Number Object)
+
+        JavaScript me Number wrapper object hota hai jisse methods milte hain.
+        Interesting baat 👇
+        Yaha JavaScript automatically temporary object bana deta hai, isliye methods chal jate hain.
+        */
+
+
         console.log(score);
         console.log(balance);
         console.log(score.toString().length) // 3
-        
+
         console.log(score.toFixed(3)); // 400.000
 
-        const prenum = 5112.8952 ; 
+        const prenum = 5112.8952;
         console.log(prenum.toPrecision(4)) //5113
         console.log(prenum.toPrecision(3)) //5.11e+3 // kul ketla digits screen uapr show thava joi
 
-        
+
         console.log(prenum.toPrecision(2)) //5.1e+3
 
         const hundreds = 1000000;
         console.log(hundreds.toLocaleString("en-IN")); // to converts number into strings and return with coma if we need indian ruppes 
         // count then you can use en-IN
 
-//+++++++++++++++++++++++++++++++++++++++ MATH +++++++++++++++++++++++++++++++++++++++++++++ 
-/*JavaScript me Math na to function hai, na normal method — Math ek built-in object hai.
-Math JavaScript ka global object hai jo mathematical calculations ke liye use hota hai.
-Math ke andar:
--Properties (constants)
--Methods (functions)*/
+        //+++++++++++++++++++++++++++++++++++++++ MATH +++++++++++++++++++++++++++++++++++++++++++++ 
+        /*JavaScript me Math na to function hai, na normal method — Math ek built-in object hai.
+        Math JavaScript ka global object hai jo mathematical calculations ke liye use hota hai.
+        Math ke andar:
+        -Properties (constants)
+        -Methods (functions)*/
 
         console.log(Math.abs(-4)) // Number ka positive version (sign hata deta hai)
         console.log((Math.round(4.4))); // roundof 4.5 upar ni value (4.4) to 4 ane 4.6 mate 5
         // pan jo ani uapr control lavu hoy to .......
-        console.log(Math.ceil(4.2)) ; // 5 cealing (top)
-        console.log(Math.floor(4.9)) ;// 4 cealing (floor)
-        console.log(Math.min( 1 ,22 ,34 , 44 )) // minimum value
-        console.log(Math.max( 1 ,22 ,34 , 44 )) // maximum value
+        console.log(Math.ceil(4.2)); // 5 cealing (top)
+        console.log(Math.floor(4.9));// 4 cealing (floor)
+        console.log(Math.min(1, 22, 34, 44)) // minimum value
+        console.log(Math.max(1, 22, 34, 44)) // maximum value
 
         console.log(Math.random()) //  gives value between 0 & 1 
-        console.log((Math.random()*10) + 1 ) // ama *10 karva thhi su thy pela je value avti hati 0 & 1 vacche(0.9378106) have tema * 10 karva thi ak point 
+        console.log((Math.random() * 10) + 1) // ama *10 karva thhi su thy pela je value avti hati 0 & 1 vacche(0.9378106) have tema * 10 karva thi ak point 
         // value aagd khasi jase ane +1  use karvanu karan ae che ke ama 0 pan avi sake je apde nthi lavu etle + 1
-        console.log(Math.floor((Math.random()*10) + 1 ));
+        console.log(Math.floor((Math.random() * 10) + 1));
 
-        {let min = 30 ;
-        let max = 40 ;
+        {
+            let min = 30;
+            let max = 40;
 
-        console.log(Math.floor(Math.random()* (max - min + 1))+ min);}
-// ahi math.floor karyu kem ke point pachi na je digits ave te na ave ak floor value lai le rounfigure kari ne pachi apde randome
-// digit leva math.random() * max(40) - min(30) + 1(0 include na thy te mate)     , pachi last ma apde min add karyu jenu karan che ke value 1 thi
-// ny pan apde je lakhyu vhe 30 tji chalu j thavi joi je mate apde etla plus karva pade mtlb apde +min add karyu
+            console.log(Math.floor(Math.random() * (max - min + 1)) + min);
+        }
+        // ahi math.floor karyu kem ke point pachi na je digits ave te na ave ak floor value lai le rounfigure kari ne pachi apde randome
+        // digit leva math.random() * max(40) - min(30) + 1(0 include na thy te mate)     , pachi last ma apde min add karyu jenu karan che ke value 1 thi
+        // ny pan apde je lakhyu vhe 30 tji chalu j thavi joi je mate apde etla plus karva pade mtlb apde +min add karyu
 
         let min = 70;
-        let max = 100 ;
+        let max = 100;
 
-        console.log(Math.floor(Math.random()* (max - min +1))+min)
+        console.log(Math.floor(Math.random() * (max - min + 1)) + min)
 
 
-        
 
-        
+
+
 
 
 
     </script>
 </body>
+
 </html>

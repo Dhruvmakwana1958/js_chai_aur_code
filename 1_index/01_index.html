@@ -20,7 +20,7 @@
 
       console.log(typeof Name);
       console.log(x);
-      console.log(typeof a);
+      console.log(typeof a); //************ This is most IMP ************
 
 
       console.table([arr])
@@ -47,13 +47,29 @@
 
       let nulx = String(a);
       console.log(nulx); // null
-/* convirsion              val
+/* 
+ *********************** ahi aa nich na je kai b conversions karya che te number ne anulaxi ne kary che to aa value badhi che te number 
+ conversion na refrense thi avi che *************
+
+   convirsion              val
       "33"                number
     "33abc"                NaN
     true ,false           1 , 0
       null                  0   
    undefined               NaN
 
+console.log(String(33));        // "33"
+console.log(String(true));      // "true"
+console.log(String(false));     // "false"
+console.log(String(null));      // "null"
+console.log(String(undefined)); // "undefined"
+
+❌ False banne wali values (Falsy values)
+console.log(Boolean(0));          // false
+console.log(Boolean(""));         // false
+console.log(Boolean(null));       // false
+console.log(Boolean(undefined));  // false
+console.log(Boolean(NaN));        // false
 
 
 
