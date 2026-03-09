@@ -17,7 +17,10 @@ console.log(regularUser);
 console.log(regularUser.fullname.userFullName);
 
 let obj1 = {1 : "a" , 2 : "b"};
-let obj2 = {3 : "c" , 4 : "d"};
+let obj2 = {
+    3 : "c" , 
+    4 : "d"
+};
 
 // const obj3 = Object.assign({} , obj1 , obj2) // ama {}(empty obj) ny devi to pan chalse
 // console.log(obj3)

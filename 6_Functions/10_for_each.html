@@ -12,7 +12,16 @@
         arr.forEach((val , index , arr) => {
             console.log(val.toUpperCase() , index , arr);
         })
-        
+
+// **********************************************************************************************************************************
+// apde alag thi function declare kari ne foreach ma teno reference api ne pan execute kari sakay 
+const newarr = ["cpp" , "javascript" , "ruby" , "rail" , "swift"]
+
+const lanname = (val)=>{
+    console.log(val.toUpperCase());
+}
+newarr.forEach(lanname); // ahi apde lanname()  rite na lakhvu 
+
     </script>
 </body>
 </html>

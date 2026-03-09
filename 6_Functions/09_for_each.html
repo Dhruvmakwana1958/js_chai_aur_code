@@ -7,6 +7,8 @@
 </head>
 <body>
     <script>
+
+        // foreach thi original arary ma change thy
         // forEach method ne higher order function(HOF) / higher order method(HOM) kehvama ave che
         // array na element ne one by one print karva ane teno upyog che jem ke one by one elements ne uppercase ma priint karva
         let arr = ["Delhi" , "Pune" , "Jarkhand" ,"Dehradun"]
@@ -14,6 +16,19 @@
         arr.forEach((val) => {
             console.log(val.toUpperCase());
         });
+
+        /*arr.forEach( function functionname(parameter){
+            console.log(parameter)
+        })*/ // aa rite apde manually arr.foreach kari ne andar callback function mukvu pan ahi foreach no use karva mate
+        // calbackfun use karvu pde ane teno matlb ke function nu name na apvu ane parameter ma je array iterate karvo che te lkvu niche examp che
+
+        arr.forEach( function (val){
+            console.log(val.toLowerCase())
+        })
+
+        
+        
+        
     </script>
 </body>
 </html>

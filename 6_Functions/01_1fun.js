@@ -4,7 +4,7 @@ const loginUserMessage = function(username="sam"){
         return
         // aa retun lakhvano mtlb ke ani paci nu execute na thy
     }
-    return console.log(`${username} just logged in`) 
+    return console.log(`${username} just logged in`) // EXPLICITE RETURN aa rite return no alag thi keyword lahine use karyo hoy too ene 
 }
 
 loginUserMessage()

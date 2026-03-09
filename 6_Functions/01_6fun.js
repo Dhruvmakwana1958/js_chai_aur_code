@@ -1,7 +1,7 @@
 const addTwo = (num1 , num2) =>{
-    return num1 + num2
+    return num1 + num2  // EXPLICIT RETURN
 }
-//OR
+//OR IMPLICIT return (jema return keyword lakhvani jarur padti nathi fakt num1 and num2 ne same line ma lakhvanu hoy che)
 const add = (num1 , num2) => ( num1 + num2)
 console.log(add(4,5));
 // curley brackets hoy to return no use thy , 

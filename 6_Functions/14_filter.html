@@ -9,18 +9,27 @@
 
 <body>
     <script>
+        // let variable = arraname.filter((iterable name)=> condition)
+
         let arr = [4, 5, 2, 8, 35, 11, 22];
         let newArray = arr.filter((val) => {
-            return val % 2 == 0;
+            return val >20 ;  // EXPLICIT RETURN
 
         });
-        let new2array = arr.filter((val) => {
-            return val % 2 !== 0;
-        });
+        let new2array = arr.filter((val) => val % 2!==0 ) //IMPLICIT RETURN
+
+        // newNums = []
+        // arr.forEach( (val)=>{
+        //     if(val>20 ){
+        //         newNums.push(val)
+        //     }
+        // } )
 
         console.log(newArray);
         console.log(new2array);
+        // console.log(newNums);
+        
     </script>
 </body>
-
+;
 </html>

@@ -1,5 +1,5 @@
 let items = ["potato", "Apple", "Litchi", "Tomato"];
-let marks = [94, 87, 65, 77];
+let marks = [94,87, 65, 77];
 let heros = ["spiderman", "Thor"];
 
 console.log(items.includes("Tomato"))
@@ -24,7 +24,7 @@ console.log("\n")
 
 let car = ["benz" , "chevrollete"] // it's called speread method
 let bottle = ["redLable" , "signature"]
-let allEle = [...car , ...bottle];
+let allEle = [...car , ...bottle , ...marks];
 console.log(allEle)
 
 let another_array = [2 ,4 ,8 , [76 ,43 ,90] , 54 , [2 ,3 ,[9 , [25 ,35]]]];
