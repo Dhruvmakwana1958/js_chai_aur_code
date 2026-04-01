@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">DOM Learning On Chai Or Code </h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing </p>
+    </div>
+
+    <script>
+        // console
+        /*
+        1) document.getElementById('title')
+        <- <h1 id="title" class="heading">DOM Learning On Chai Or Code </h1>
+         
+        2) document.getElementById('title').id
+        <- 'title'
+
+        3) document.getElementById('title').className
+        <- 'heading'
+
+        4) document.getElementById('title').getAttribute('id')
+        <- 'title'
+
+        5) document.getElementById('title').getAttribute('class')
+        <- 'heading'
+
+        6) document.getElementById('title').setAttribute('class' , 'testing')
+        <- <h1 id="title" class="testing">DOM Learning On Chai Or Code </h1>
+
+
+        */
+
+        const title =  document.getElementById('title')
+        title.style.backgroundColor = "green"
+
+        //OR
+
+        // const title =  document.getElementById('title').style.backgroundColor = "green"
+
+        document.getElementById('title').style.padding = "10px"
+        document.getElementById('title').style.borderRadius = "30px"
+
+
+
+
+
+    </script>
+
+    
+</body>
+</html>

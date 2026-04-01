@@ -7,5 +7,5 @@ console.log(add(4,5));
 // curley brackets hoy to return no use thy , 
 // round hoy to return no use na karvo
 
-const adi = (num1 , num2) => ({userName : "hitesh"}) // object ne function ma excute karvo hoy to pela round bracket pachhi curley lagavi sakay
+const adi = () => ({userName : "hitesh"}) // object ne function ma excute karvo hoy to pela round bracket pachhi curley lagavi sakay
 console.log(adi())

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+
+     <div>
+        <h1 id="title" class="heading">DOM Learning On Chai Or Code <span style="display: none;">test text</span> </h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing </p>
+    </div>
+    
+
+    <script>
+        const title =  document.getElementById('title')
+        title.style.backgroundColor = "green" 
+        // difrrence between innerContent , innerHTML , textContent
+
+        console.dir(title.textContent) // hindden text pan sgow kare 
+        console.dir(title.innerText) // display upar jetlu text dekhay etlu j print kare
+        console.dir(title.innerHTML) // text with tag
+
+        
+        
+
+
+
+    </script>
+</body>
+</html>

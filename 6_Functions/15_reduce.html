@@ -7,12 +7,25 @@
 </head>
 <body>
     <script>
-        // ano use tyare thy jayre input bav badha ane output enu ak j hoy like average , sum etc....
+        //ano use tyare thy jayre input bav badha ane output enu ak j hoy like average , sum etc....
         arr  = [1 , 2 , 3 , 4 ];
-        const output = arr.reduce((previous/*result*/ , current)=>{
-            return previous + current ;
-        });
-        console.log(output);
+        // const output = arr.reduce((previous/*result*/ , current)=>{
+        //     console.log(`previous = ${previous} & current =  ${current}`)
+        //     return previous + current ;
+        // });
+        // console.log(output);
+
+        // ahi privios first time run thy tyare initial value devi pade je apde ahi didhi nthi but jo devi hoy to aa rite kari sakay
+        // arr  = [1 , 2 , 3 , 4 ];
+        // const output = arr.reduce((previous, current)=>{
+        //     console.log(`previous = ${previous} & current =  ${current}`)
+        //     return previous + current ;
+        // },2); // ahi first previos = 2 & current = 1 , previos = 3 & current = 2 ............. 12
+        // console.log(output);
+
+        const output = arr.reduce((previous, current)=>  previous + current , 5) // IMPLICIT RETURN
+        console.log(output)
+
     </script>
 </body>
 </html>
