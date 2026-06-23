@@ -11,7 +11,24 @@
     <script>
         // numbers and maths
         let score = 400;
-        let balance = new Number(400); // avi rite js ma kai pan declare karo to te as a object j treat thy che pan am karvu jaruri nthi kem ke 
+        /*👉 Ye ek primitive number hai
+
+              Type: number
+              Simple value store hoti hai
+              Fast & lightweight*/
+        let balance = new Number(400);
+        /*👉 Ye ek Number object hai (non-primitive)
+
+              Type: object
+              new keyword se object create hota hai
+              Wrapper object ban jata hai
+              
+              🔥 new keyword ka use kyu?
+                 👉 new ka matlab hota hai:
+                 ➡️ Ek naya object create karo
+              */
+
+        // avi rite js ma kai pan declare karo to te as a object j treat thy che pan am karvu jaruri nthi kem ke 
         // by default java script ae ane convert kari j de che object ma etle j to metthod kam kare che aa 
         /*let a = 400;
         let b = new Number(400);
@@ -34,6 +51,8 @@
         const prenum = 5112.8952;
         console.log(prenum.toPrecision(4)) //5113
         console.log(prenum.toPrecision(3)) //5.11e+3 // kul ketla digits screen uapr show thava joi
+        console.log(prenum.toFixed(2));
+
 
 
         console.log(prenum.toPrecision(2)) //5.1e+3
@@ -53,7 +72,7 @@
         console.log((Math.round(4.4))); // roundof 4.5 upar ni value (4.4) to 4 ane 4.6 mate 5
         // pan jo ani uapr control lavu hoy to .......
         console.log(Math.ceil(4.2)); // 5 cealing (top)
-        console.log(Math.floor(4.9));// 4 cealing (floor)
+        console.log(Math.floor(4.9));// 4 Flooring (floor)
         console.log(Math.min(1, 22, 34, 44)) // minimum value
         console.log(Math.max(1, 22, 34, 44)) // maximum value
 
@@ -72,17 +91,12 @@
         // digit leva math.random() * max(40) - min(30) + 1(0 include na thy te mate)     , pachi last ma apde min add karyu jenu karan che ke value 1 thi
         // ny pan apde je lakhyu vhe 30 tji chalu j thavi joi je mate apde etla plus karva pade mtlb apde +min add karyu
 
-        let min = 70;
-        let max = 100;
+        let min = 100
+        let max = 200
+
+        console.log(Math.floor(Math.random() * (max - min + 1)) + min);
 
         console.log(Math.floor(Math.random() * (max - min + 1)) + min)
-
-
-
-
-
-
-
 
     </script>
 </body>

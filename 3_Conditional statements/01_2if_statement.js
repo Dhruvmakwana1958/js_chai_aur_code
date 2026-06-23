@@ -41,10 +41,8 @@ switch(secmonth){
         break;
 
     default:
-        console.log("noting to print");
+    console.log("noting to print");
     
-
-
 }
 
 

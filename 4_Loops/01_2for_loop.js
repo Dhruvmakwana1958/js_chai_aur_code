@@ -1,6 +1,7 @@
 // for(let i =0 ; i<=10 ; i++){
 //     if(i === 5){
 //         console.log(`${i} is best number`)
+//         // continue (we can write continue if we dont need to write 5 two times in output , please check output before confusing that line)
 //     }
 //     console.log(i)
 // }

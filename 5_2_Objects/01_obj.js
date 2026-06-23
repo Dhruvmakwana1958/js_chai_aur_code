@@ -8,7 +8,7 @@ const jsUser = {
     isLogedIn : false ,
     lastLoginDays : ["monday" , "tuesday" , "friday"] ,
     [mysim] : "uniqueid" // syomble define karva 
-
+    // ChatGpt search :- object me syomble fdata type ko kese define kare
 }
 
 console.log(jsUser.namee); // aa rite declare kari sakay but in some case aa ny chale
@@ -20,4 +20,7 @@ jsUser["namee"] = "kinjal dave"
 Object.freeze(jsUser);  // ahi jo je te object ne freeze kari dai to tei value change na thy
 jsUser.namee = "raj thakkar"
 console.log(jsUser)
+
+console.log(jsUser["mysim"]) /*✖️*/
+console.log(jsUser[mysim]) /*✔️*/
 

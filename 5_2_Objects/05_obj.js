@@ -1,4 +1,6 @@
 const TinderUser = {}
+// OR
+// const TinderUser = new Object
 
 TinderUser.id = "123abc"
 TinderUser.name = "sammy"

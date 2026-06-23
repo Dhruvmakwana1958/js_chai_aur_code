@@ -18,7 +18,7 @@ let my = items.push(marks);
 console.log(my); // aa navo array show ny kare
 console.log(items); // banne joint to thy gya but ak array ni andar bijo array ae rite avyu ane ani length items na 4 element mtlb 4 ane + 1 mark 
 // vado array = 5 apde ahi concat method no use karvo joiae
-console.log(items.concat(marks).join(" "))
+console.log(items.concat(marks).join(","))
 console.log("\n")
 
 
