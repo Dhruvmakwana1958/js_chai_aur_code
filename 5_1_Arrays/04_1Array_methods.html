@@ -30,10 +30,14 @@
         console.log(deleteditems);
 
         
-        console.log(marks.toString()); // ----> gives new array do not change in original 
+        console.log(marks.toString()); // ----> gives new array do not change in original
+        
+        heros.reverse()       //-------> gives changes in array
+        console.log(heros); 
 
         console.log(items.concat(marks)); //--->  gives new array
         console.log(heros.concat(marks,items));
+        
         // OR 
         // let allitems = items.concat(marks);
         // console.log(allitems);
@@ -47,6 +51,8 @@
 
         console.log(items.slice(1,3)) // ama original element change na thy 
         console.log(items.slice()); //use for copy arrays
+        console.log(items.slice(1)); // index start from and upto end of the array
+        
         
     </script>
 </body>

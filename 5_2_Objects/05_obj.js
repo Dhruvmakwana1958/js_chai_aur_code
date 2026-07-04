@@ -29,12 +29,22 @@ const user = [
     }
 ]
 
+console.log(user[3]["email"])
+user[2].id = 35 ;
+console.log(user[2])
+console.log("\n")
+
 user.forEach((val)=>{
     console.log(val.email)
 })
+
 
 console.log(TinderUser);
 console.log(Object.keys(TinderUser)) // jo object ni keys joi to ano use karvo ane anu output array avse ane jene upyog kari ne aray ni methods 
 // ne upyog ma lai sakay
 console.log(Object.values(TinderUser))
+
+
+
+
 

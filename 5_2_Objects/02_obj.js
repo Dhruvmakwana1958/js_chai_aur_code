@@ -4,8 +4,10 @@ const jsUser = {
     lastLoginDays : ["monday" , "tuesday" , "friday"] ,
     [mysim] : "myid" // syomble define karva 
 
+
 }
 
+jsUser.gender = "female"
 console.log(jsUser)
 /*JS to block scope hai, to bahar wala aur andar wala alag hona chahiye?
 

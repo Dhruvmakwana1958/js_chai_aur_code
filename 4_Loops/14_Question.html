@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const favMovie = "avatar";
+        let guess = prompt("guess my favorite movie");
+        while ((guess != favMovie) && (guess != "quit"))
+            guess = prompt("wrong guess. please try again");
+
+        if (guess == favMovie) {
+            console.log("congrats !! ");
+        } else {
+            console.log("you quit")
+        }
+
+        // const favMovie = "avatar";
+        // let guess = prompt("guess my favorite movie");
+        // while (guess != favMovie )
+        // if(guess == "quite"){
+        //     console.log("you quite")
+        //     break;
+        // }
+        //     guess = prompt("wrong guess. please try again");
+
+        // if (guess == favMovie) {
+        //     console.log("congrats !! ");
+        // } 
+
+
+
+
+
+    </script>
+</body>
+
+</html>

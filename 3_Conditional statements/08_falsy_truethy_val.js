@@ -25,7 +25,7 @@ console. log("Don't have user email");
  false, 0, -0, BigInt On, "", null, undefined, NaN 
 
  notes  :---> truethy values
- "0", 'false' , " ", [], {}, function() {}
+ "0", 'false' , " ", [], {}, function() {}   evrything instead of falsy is truthy
  */
 
  if(userEmail.length === 0){  //  to check array is empty or not

@@ -19,13 +19,14 @@ console.log(my); // aa navo array show ny kare
 console.log(items); // banne joint to thy gya but ak array ni andar bijo array ae rite avyu ane ani length items na 4 element mtlb 4 ane + 1 mark 
 // vado array = 5 apde ahi concat method no use karvo joiae
 console.log(items.concat(marks).join(","))
-console.log("\n")
+console.log("\n");
 
 
 let car = ["benz" , "chevrollete"] // it's called speread method
 let bottle = ["redLable" , "signature"]
 let allEle = [...car , ...bottle , ...marks];
 console.log(allEle)
+
 
 let another_array = [2 ,4 ,8 , [76 ,43 ,90] , 54 , [2 ,3 ,[9 , [25 ,35]]]];
 let r_anothet_array = another_array.flat(Infinity); // 2,  4, 8, 76, 43,  90, 54, 2,  3,  9
@@ -37,3 +38,7 @@ console.log(r_anothet_array);
 
 
 
+/*
+join() → Array ➜ String (ye aray ki mrthod hai ye string ki method nahi hai)
+split() → String ➜ Array
+*/
