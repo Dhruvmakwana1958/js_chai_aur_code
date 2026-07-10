@@ -16,6 +16,19 @@ user.username = "sam" // ahi apde username ni value change kari sakya kem ke thi
 user.welcomMessage();
 console.log(user)
 
+
+function sum(a , b = 5){
+    return a + b ;
+}
+console.log(sum(4))
+
+function sum2(a=5 , b ){
+    return a + b ;
+}
+console.log(sum2(4))  // aa case ma NaN avse just because ahi value bydefaut order ma levama ave che to ahi je peli value che e j  a mate che
+// ane biji value b mate che
+
+
 // ***********************************************************************************************************************************
 
 // function chai(){

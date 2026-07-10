@@ -1,0 +1,59 @@
+const object = {
+    message: "Hello, World!",
+
+    logMessage() {
+        console.log(this.message);
+    }
+};
+object.logMessage(); // ahi apde logMessage() aa rite parenthisis lagavi ne method call kari etla mate Hello, World! thse
+setTimeout(object.logMessage, 1000); // pn ahi jovo apde method nthi call kari kahli function pass karyu che method pass karva mate 
+// () aa parenthisis lagav pade je aya nthi lagavyu ane lagvsy to error avse
+
+/*Kyu undefined aata hai?
+
+Jab tum ye likhte ho:
+
+object.logMessage();
+
+to this object ko refer karta hai, isliye:
+
+this.message
+
+matlab
+
+object.message
+
+Output:
+
+Hello, World!
+Lekin setTimeout me kya hota hai?
+setTimeout(object.logMessage, 1000);
+
+Yaha tum sirf function pass kar rahe ho, object nahi.
+
+1 second baad setTimeout is function ko aise call karta hai:
+
+logMessage();
+
+Na ki
+
+object.logMessage();
+
+Isliye this ab object nahi rehta.
+
+Result:
+
+this.message
+
+undefined ho jata hai.
+
+Agar "Hello, World!" print karwana ho
+Method 1: Arrow Function (Best)
+setTimeout(() => {
+    object.logMessage();
+}, 1000);
+
+Output:
+
+Hello, World!
+*/

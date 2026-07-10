@@ -7,6 +7,7 @@ let uniqueCharacter = function(str){
     for(let i = 0; i<str.length ; i++){
         if(!result.includes(str[i])){
             result += str[i]
+          //result.push(str[i]) ✖️ because push mehtod fakt array mate che   
         }
     }
     return result;  

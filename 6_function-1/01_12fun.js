@@ -11,7 +11,6 @@ outer();
 //  THIS CODE RUN SUCCESFULLY
 // *****************************************************************************************
 
-
 let greet = "hello"; // global scop
 
 function changeGreet() {

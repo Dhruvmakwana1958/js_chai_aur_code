@@ -1,0 +1,1 @@
+// 25 ma folder no 7 mo video farajiyat jovo (this with arrow function)

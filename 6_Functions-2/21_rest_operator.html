@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // oposite of spread
+        /*spread = single value ma thi multipal value kadhe che mtlb spread kare che
+                   Allows a function to take an indefinite number of arguments and bundle them in an array
+           rest  = multiple values avti hoy tene ak ni andar store kare
+        
+           Jab hume function me kitne arguments pass honge ye pehle se pata nahi hota, tab hum Rest Operator (...) ka use karte hain. Ye saare arguments 
+           ko ek array me store kar deta hai.
+        
+        Dhyan dene wali baat:
+        Rest operator sirf isliye nahi bana hai ki arguments ki number unknown ho, balki multiple values ko ek array me collect (gather) karne ke liye
+        bhi use hota hai.
+        
+        Example:
+        
+        */
+        let arr = (...ele) => {
+            for (let i = 0; i < ele.length; i++) {
+                console.log("You gave us:", ele[i]);
+            }
+        }
+        arr(1, 2, 3, 4);
+
+
+        function meow() {
+            console.log(arguments); // argument nu collection che je bydefault hoy che
+            console.log(arguments.length); 
+            // arguments.push(5) this is ✖️ because argument koi array nthi ke apde eni upar method apply kari sakiae argument is collectuon 
+            // of data 
+            
+        }
+        meow(2, 5, 6, 8)
+
+        
+
+    </script>
+</body>
+
+</html>

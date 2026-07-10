@@ -2,9 +2,9 @@ const loginUserMessage = function(username="sam"){
     if(!username){
         console.log("please enter username")
         return
-        // aa retun lakhvano mtlb ke ani paci nu execute na thy
+        // aa retun lakhvano mtlb ke ani pachi nu execute na thy
     }
-    return console.log(`${username} just logged in`) // EXPLICITE RETURN aa rite return no alag thi keyword lahine use karyo hoy too ene 
+    return console.log(`${username} just logged in`) 
 }
 
 loginUserMessage()

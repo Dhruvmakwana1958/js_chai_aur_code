@@ -24,6 +24,20 @@ const cal2 = {
     }
 }
 
+/* OR
+const cal2 = {
+    add: (a, b) => {
+        return a + b;
+    },
+    sub: (a, b) => {
+        return a - b;
+    },
+    mul: (a, b) => {
+        return a * b;
+    }
+}
+*/
+
 console.log(cal2.add(20,50))
 console.log(calculator.add(4,5))
 console.log(calculator.mul(4,5))

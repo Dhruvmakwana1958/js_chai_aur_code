@@ -7,8 +7,8 @@
 </head>
 <body>
     <script>
+        //forEach() → Sirf har element par kaam karta hai, kuch return nahi karta (undefined return karta hai).
 
-        // foreach thi original arary ma change thy
         // forEach method ne higher order function(HOF) / higher order method(HOM) kehvama ave che
         // array na element ne one by one print karva ane teno upyog che jem ke one by one elements ne uppercase ma priint karva
         let arr = ["Delhi" , "Pune" , "Jarkhand" ,"Dehradun"]
@@ -16,6 +16,7 @@
         arr.forEach((val) => {
             console.log(val.toUpperCase());
         });
+       
 
         /*arr.forEach( function functionname(parameter){
             console.log(parameter)
@@ -26,9 +27,8 @@
             console.log(val.toLowerCase())
         })
 
-        
-        
-        
+        // matlb ham sirf console se hi print karva sakte hai return ka use nhi kar sakte
+   
     </script>
 </body>
 </html>

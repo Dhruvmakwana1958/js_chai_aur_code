@@ -7,6 +7,5 @@ function combination(array){
     return result ;
     
 }
-
 let arr = ["Hey" , "Makwana" , "what" , "are" , "you" , "doing"];
 console.log(combination(arr))

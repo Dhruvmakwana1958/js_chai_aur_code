@@ -14,3 +14,9 @@ global scop ma ambiguity kari sake etle aa pollute na thy ene mate aa IIFE no us
 ( (name) => {  // unnamed iife
     console.log(`DB Connected Two ${name}`);  
 })("hitesh")
+
+const square = ((n)=>{
+    return n*n
+})(5);
+
+console.log(square);

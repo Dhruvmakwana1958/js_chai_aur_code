@@ -6,7 +6,8 @@ console.log(newnumbs)
 // arr.forEach((val)=>{
 //     console.log(val * 10);
 // }) // foreach ma apde return no use na kari sakvi kem ke forEach array na ak ak element upar jay che ane te value le che te return nthi karavi saktu
-// ane jo return karavi ne navo j array banvo hoy to map method che but jo apde foreach no use karvani sathe return b karvu chr to....
+// ane jo return karavi ne
+//  navo j array banvo hoy to map method che but jo apde foreach no use karvani sathe return b karvu chr to....
 
 
 
