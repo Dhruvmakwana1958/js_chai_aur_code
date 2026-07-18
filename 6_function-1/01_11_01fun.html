@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+
+<body>
+      <script>
+           
+
+            
+            /****************************************************************************************
+                                            JAVASCRIPT HOISTING
+             ****************************************************************************************
+            
+            📌 Hoisting Kya Hai ?
+            
+            Hoisting ka matlab hai ki JavaScript code execute hone se pehle
+            poore code ko ek baar scan karti hai aur variables aur functions
+            ki declarations ko memory me register kar leti hai.
+            
+            ⚠️ Important :
+            Hoisting ka matlab ye nahi hai ki code physically upar chala jata hai.
+            Sirf declarations memory me pehle register hoti hain.
+            
+            =========================================================================================
+                                JAVASCRIPT CODE KAISE EXECUTE HOTA HAI?
+            =========================================================================================
+            
+            JavaScript kisi bhi program ko 2 phases me execute karti hai.
+            
+            1. Memory Creation Phase
+            2. Execution Phase
+            
+            -----------------------------------------------------------------------------------------
+            1) Memory Creation Phase
+            -----------------------------------------------------------------------------------------
+            
+            Is phase me JavaScript poore code ko scan karti hai.
+            
+            Ye dekhti hai:
+            ✔ Variables
+            ✔ Functions
+            
+            Aur unke liye memory allocate karti hai.
+            
+            -----------------------------------------------------------------------------------------
+            2) Execution Phase
+            -----------------------------------------------------------------------------------------
+            
+            Is phase me JavaScript line-by-line code execute karti hai.
+            
+            =========================================================================================
+                                       EXAMPLE : var
+            =========================================================================================
+            
+            Code:
+            
+            console.log(name);
+            var name = "Dhruv";
+            console.log(name);
+            
+            ------------------------------------
+            Step 1 : Memory Creation Phase
+            ------------------------------------
+            
+            JavaScript internally is tarah memory banati hai.
+            
+            var name;
+            name = undefined;
+            
+            Memory:
+            
+            name = undefined
+            
+            ------------------------------------
+            Step 2 : Execution Phase
+            ------------------------------------
+            
+            Line 1
+            
+            console.log(name);
+            
+            Output:
+            
+            undefined
+            
+            Kyuki variable to memory me tha,
+            lekin usme abhi value assign nahi hui thi.
+            
+            ------------------------------------
+            
+            Ab ye line execute hogi
+            
+            name = "Dhruv";
+            
+            Ab memory:
+            
+            name = "Dhruv"
+            
+            ------------------------------------
+            
+            Ab
+            
+            console.log(name);
+            
+            Output:
+            
+            Dhruv
+            
+            ------------------------------------
+            
+            Final Output
+            
+            undefined
+            Dhruv
+            
+            =========================================================================================
+                                       EXAMPLE : let
+            =========================================================================================
+            
+            Code:
+            
+            console.log(age);
+            let age = 20;
+            
+            Output:
+            
+            ReferenceError
+            
+            =========================================================================================
+                                          AISA KYUN HOTA HAI?
+            =========================================================================================
+            
+            let bhi hoist hota hai.
+            
+            Lekin...
+            
+            JavaScript usko undefined assign nahi karti.
+            
+            Wo kehti hai:
+            
+            "Variable memory me bana diya hai,
+            lekin jab tak declaration wali line execute nahi hogi,
+            tab tak ise use nahi kar sakte."
+            
+            Isi wajah se ReferenceError aata hai.
+            
+            =========================================================================================
+                                  TDZ (Temporal Dead Zone)
+            =========================================================================================
+            
+            Full Form:
+            
+            Temporal Dead Zone
+            
+            Simple Language:
+            
+            Variable memory me to hota hai,
+            lekin declaration execute hone se pehle usko access karna mana hota hai.
+            
+            Isi period ko TDZ kehte hain.
+            
+            Example:
+            
+            console.log(age);
+            
+            let age = 20;
+            
+            Yahan
+            
+            console.log(age);
+            
+            TDZ ke andar hai.
+            
+            Jab execution
+            
+            let age = 20;
+            
+            tak pahunchta hai,
+            
+            tab TDZ khatam ho jata hai.
+            
+            Uske baad
+            
+            console.log(age);
+            
+            likhoge to
+            
+            20
+            
+            print hoga. par hamare case me nhi hoga kyoki hamrare pahele vale console .log se hi error aa gya to phir bad vala code chalega nhi
+            aa concept ani pachi vadi file ma samjavyo che 
+            
+            =========================================================================================
+                                          TDZ DIAGRAM
+            =========================================================================================
+            
+            Program Start
+                  │
+                  │
+                  ▼
+            console.log(age)      ❌ TDZ (Access Not Allowed)
+                  │
+                  │
+                  ▼
+            let age = 20          ✅ TDZ Ends
+                  │
+                  ▼
+            console.log(age)      ✅ Allowed
+            
+            =========================================================================================
+                                       const
+            =========================================================================================
+            
+            Code:
+            
+            console.log(city);
+            
+            const city = "Ahmedabad";
+            
+            Output:
+            
+            ReferenceError
+            
+            Reason:
+            
+            const bhi let ki tarah TDZ me rehta hai.
+            
+            Diagram
+            
+            console.log(city)      ❌ TDZ
+            
+            const city = "Ahmedabad"     ✅ TDZ Ends
+            
+            =========================================================================================
+                                 var vs let vs const
+            =========================================================================================
+            
+            var
+            
+            Memory:
+            
+            a = undefined
+            
+            Code:
+            
+            console.log(a);
+            
+            var a = 10;
+            
+            Output:
+            
+            undefined
+            
+            ----------------------------------------
+            
+            let
+            
+            Memory:
+            
+            a = <TDZ>
+            
+            Code:
+            
+            console.log(a);
+            
+            let a = 10;
+            
+            Output:
+            
+            ReferenceError
+            
+            ----------------------------------------
+            
+            const
+            
+            Memory:
+            
+            a = <TDZ>
+            
+            Code:
+            
+            console.log(a);
+            
+            const a = 10;
+            
+            Output:
+            
+            ReferenceError
+            
+            =========================================================================================
+                                 EASY TRICK TO REMEMBER
+            =========================================================================================
+            
+            🏦 Bank Example
+            
+            ----------------------------------------
+            var
+            ----------------------------------------
+            
+            Bank ne account bana diya.
+            
+            Aur usme balance bhi dikha diya.
+            
+            Balance = undefined
+            
+            Tum account check kar sakte ho.
+            
+            Account ✔
+            Balance = undefined
+            
+            ----------------------------------------
+            let
+            ----------------------------------------
+            
+            Bank ne account bana diya.
+            
+            Lekin bola:
+            
+            "Pehle verification complete hone do,
+            tab tak account use nahi kar sakte."
+            
+            Agar tum balance check karoge,
+            
+            ReferenceError
+            
+            Aayega.
+            
+            Ye verification period hi
+            
+            TDZ (Temporal Dead Zone)
+            
+            kehlata hai.
+            
+            =========================================================================================
+                                      SUMMARY
+            =========================================================================================
+            
+            ✔ Hoisting = JavaScript execution se pehle declarations ko memory me register karti hai.
+            
+            ✔ var hoist hota hai aur uski initial value undefined hoti hai.
+            
+            ✔ let hoist hota hai lekin TDZ me rehta hai.
+            
+            ✔ const bhi hoist hota hai aur TDZ me rehta hai.
+            
+            ✔ TDZ = Variable memory me hai, lekin declaration execute hone tak use nahi kar sakte.
+            
+            ✔ Function Declaration puri ki puri hoist hoti hai.
+            
+            ✔ Function Expression aur Arrow Function me sirf variable hoist hota hai,
+               function nahi.
+            
+            ****************************************************************************************/
+      </script>
+</body>
+
+</html>

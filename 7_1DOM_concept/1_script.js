@@ -5,8 +5,12 @@ console.dir(document)         // ana thi document ni property open thse ane biju
 
 // console.log => string print karava
 // console.dir => methods , property print karava
+// property :- Object ke andar jo normal value hoti hai use Property kehte hain.
+// method :- Object ke andar jo function hota hai use Method kehte hain.
 
 console.dir(document.body.childNodes[1]);
 window.document.body.style.background = "green";
 document.body.childNodes[3].innerText = "ABCD"
+
+
 

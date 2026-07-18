@@ -4,7 +4,8 @@ function largerElements(arr, num) {
 
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] > num) {
-            result.push(arr[i]);
+            // let result = arr[i]; aavu karvi to result to mdse pan e ak j mdse ane je last ma sav thi motu hse e j print thse 
+            result.push(arr[i])
         }
     }
 

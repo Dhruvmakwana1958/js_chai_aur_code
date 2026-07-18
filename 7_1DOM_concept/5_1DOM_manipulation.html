@@ -13,6 +13,7 @@
             <li>Orange</li>
             <li>kiwi</li>
         </ul>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgdPr1sNKY1XbQBiPM42BAOoYIgekGJOlP2k8o4Tpc5g&s=10" alt="spider">
     </div>
 
     <script>
@@ -21,8 +22,8 @@
         console.log(_1vari);
 
 
-        let _2vari = document.querySelector("div") 
-        console.dir(_2vari.innerText); //returns only strings pan je te tag anadr ni badh j string return kare evu ny ke fakt tena child ni j 
+        let _2vari = document.querySelector("div")  
+        console.dir(_2vari.innerText); //returns only strings pan je te tag anadr ni badhi j string return kare evu ny ke fakt tena child ni j 
         // return kre
 
         let _3vari = document.querySelector("div") 
@@ -34,6 +35,7 @@
 /*Property	         Kya Return Karega
 firstChild	           Text / Comment / Element
 firstElementChild	     Sirf element
+childNodes             Text / Comment / Element
 children[0]	             Sirf element */ 
            // ahi firstchild h3 tag avo joi pan text ave che jenu karan che DOM sav thi pela as a textt le che pachi bija ma tag jenu example
 //2_2DOM vada ma apelu che jenu output joi levu to have h3 as a firstchild taike accece karva mate
@@ -58,7 +60,11 @@ children[0]	             Sirf element */
         myItalicHeading.innerHTML = "<i> Dhruv Makwana <i/>"
             
         let myhidden = document.querySelector("h3"); // it is use for showing hidden content
-        console.dir(myheanding.textContent);    
+        console.dir(myheanding.textContent);  
+        
+        // document.querySelector("img").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZmNNe70dGmK9HbEWpIyTMbsFMVGxzQHVtEVH74HIzLQ&s=10" jo image change karvi hoy to
+
+       
         
 
     

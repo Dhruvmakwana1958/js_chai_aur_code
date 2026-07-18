@@ -15,6 +15,7 @@ console.log(newnumbs)
 // arr.forEach((val)=>newArr.push(val * 10)); // IMPLICIT RETURN
 // console.log(newArr);
 
+
 // const newArr =[];
 // arr.forEach((val)=>{
 //    return newArr.push(val * 10)

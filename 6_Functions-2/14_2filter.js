@@ -14,16 +14,17 @@ const userBooks = books.filter((bk)=> bk.genre === "History");
 console.log(userBooks);
 
 
-// const userBooks2 =books.filter((bk) => bk.publish > 2000)  ahi curly brac lagadine scope nthi banvyo
+// const userBooks2 =books.filter((bk) => bk.publish > 2000)  //ahi curly brac lagadine scope nthi banvyo
 // console.log(userBooks2)
 
-const userBooks2 =books.filter((bk) => {return bk.publish > 2000}) /* ahi curly brac lagadine scope banvyo che  ane scope open karvi to return no use kevo*/
-console.log(userBooks2 )
+// const userBooks2 =books.filter((bk) => {return bk.publish > 2000}) /* ahi curly brac lagadine scope banvyo che  ane scope open karvi to return 
+// no use kevo*/
+// console.log(userBooks2 )
 
-const userBook3 = books.filter((bk)=> {
-    return bk.publish > 1995 && bk.genre === "History"
-} )
-console.log(userBook3)
+// const userBook3 = books.filter((bk)=> {
+//     return bk.publish > 1995 && bk.genre === "History"
+// } )
+// console.log(userBook3)
 
 // notes :- const userBooks2 =books.filter((bk) => {return bk.publish > 2000}) aa rite scope open karvi mtlb curly lagadvi to return no use 
 //                                                 ___________________________

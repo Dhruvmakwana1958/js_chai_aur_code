@@ -17,3 +17,6 @@ console.log(items) // gives change
 let num = [22 , 55 , 89 ,78 ,5] ;
 num.sort();
 console.log(num) ; // its not give expected result 
+
+let hitesh = [25 , 58 , 89]
+console.log(Array.from(hitesh))

@@ -28,15 +28,5 @@ console. log("Don't have user email");
  "0", 'false' , " ", [], {}, function() {}   evrything instead of falsy is truthy
  */
 
- if(userEmail.length === 0){  //  to check array is empty or not
-    console.log("array is empty")
- }
-
- const emptyobject = {};
-
- if(Object.keys(emptyobject).length === 0){
-    console.log("object is empty");
-    
- }
-
+ 
 

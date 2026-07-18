@@ -8,4 +8,4 @@ function combination(array){
     
 }
 let arr = ["Hey" , "Makwana" , "what" , "are" , "you" , "doing"];
-console.log(combination(arr))
+console.log(combination(arr));

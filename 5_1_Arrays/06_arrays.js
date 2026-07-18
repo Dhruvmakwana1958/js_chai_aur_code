@@ -8,8 +8,11 @@ console.log(rersult)
 console.log(rersult2)
 
 const arr = [" Bhim" , "Chutki" , "Kaliya" ]
-
 arr.push("Raju")
 console.log(arr)
+
+// arr = ["kaga" , "bali"]   ✖️
+// console.log(arr);
+
 // const apyu mtlb value change na thavi joi but ama thy che to evu su che je const apya pachi na kari sakay to ae che ke
-// araay ne completly change na kari sakay
+// araay ne completly change na kari sakay but jo let apyu hot to aa shakya hatu
