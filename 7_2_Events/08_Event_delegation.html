@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Todo App</h1>
+    <input type="text" placeholder="Enter Your Task ">
+    <button>Add Task </button>
+    <ul>
+        <li>sleep <button class="delete"> Delete</button></li>
+        <li>run <button class="delete"> Delete</button></li>
+    </ul>
+
+    <script>
+        // [29_3] Event delegation 
+        let h1 = document.querySelector("h1");
+        let input = document.querySelector("input");
+        let btn = document.querySelector("button");
+        let ul = document.querySelector("ul")
+
+        btn.addEventListener("click", function () {
+            let item = document.createElement("li")
+            item.innerText = input.value
+            ul.appendChild(item)
+            input.value = ""
+            item.append("\u00A0\u00A0\u00A0\u00A0"); 
+            let dltBtn = document.createElement("button")
+            dltBtn.innerText = "Delete"
+            dltBtn.classList.add("delete")
+            item.appendChild(dltBtn)
+
+            ul.addEventListener("click", function (event) {
+                // console.log("delted");
+                // console.log(event.target); // actual ma kya html elemt upar click thyu che te show kare mtlb li hoy to li nu html vadu show thy ul click karvi to ul show thy
+                // console.dir(event.target.nodeName); // BOTTON , UL , LI
+
+                /* but ya evu thy che ke apde delete button upar click kari to y print thy che , li upar karvi to y print thy che apde evu nthi jotu apdde button upar click karvi 
+                to j delete thavu joy */
+
+                if(event.target.nodeName === "BUTTON"){
+                    let listItem = event.target.parentElement;
+                    // console.log(listItem)
+                    listItem.remove();
+                    console.log("deleted")
+                }
+            });
+
+        })
+
+
+
+        /*
+==========================================================
+                EVENT DELEGATION IN JAVASCRIPT
+==========================================================
+
+Definition:
+-----------
+Event Delegation JavaScript ka ek important concept hai.
+
+Isme hum child elements par alag-alag event listeners
+lagane ki jagah unke parent element par sirf ek
+event listener lagate hain.
+
+==========================================================
+PROBLEM (Without Event Delegation)
+==========================================================
+
+HTML Example:
+
+<ul>
+    <li>Sleep <button class="delete">Delete</button></li>
+    <li>Run <button class="delete">Delete</button></li>
+</ul>
+
+Agar hum har button par event listener lagaye:
+
+let buttons = document.querySelectorAll(".delete");
+
+for (let btn of buttons) {
+    btn.addEventListener("click", function () {
+        this.parentElement.remove();
+    });
+}
+
+Problem:
+
+✔ Ye sirf page load ke time jitne buttons hote hain,
+  unhi par event listener lagata hai.
+
+Agar baad me JavaScript se naya button create kare:
+
+let newBtn = document.createElement("button");
+newBtn.innerText = "Delete";
+
+To is naye button par koi event listener nahi hoga.
+
+Isliye hume dobara event listener lagana padega.
+
+newBtn.addEventListener("click", function () {
+    console.log("Delete clicked");
+});
+
+Agar 100 naye buttons banenge,
+to 100 naye event listeners lagane padenge.
+
+Ye efficient approach nahi hai.
+
+==========================================================
+SOLUTION → EVENT DELEGATION
+==========================================================
+
+Har button par listener lagane ki jagah,
+uske parent element (UL) par sirf ek listener lagao.
+
+let ul = document.querySelector("ul");
+
+ul.addEventListener("click", function () {
+    console.log("UL Clicked");
+});
+
+Ab chahe:
+
+✔ UL par click karo.
+✔ LI par click karo.
+✔ BUTTON par click karo.
+
+Teeno cases me UL ka event listener chalega.
+
+==========================================================
+YE KAISE HOTA HAI ?
+==========================================================
+
+Iska reason hai Event Bubbling.
+
+==========================================================
+EVENT BUBBLING
+==========================================================
+
+Jab hum kisi child element par click karte hain,
+to event neeche se upar travel karta hai.
+
+Event Flow:
+
+Button
+   ↓
+LI
+   ↓
+UL
+   ↓
+BODY
+   ↓
+HTML
+
+Is process ko Event Bubbling kehte hain.
+
+Matlab agar Button par click hua,
+to event automatically uske parent,
+grandparent aur upar ke elements tak pahunch jata hai.
+
+Isi wajah se UL ka event listener bhi execute ho jata hai.
+
+==========================================================
+EVENT.TARGET
+==========================================================
+
+Parent ko kaise pata chalega ki click
+kis element par hua?
+
+Iske liye use hota hai:
+
+event.target
+
+Example:
+
+ul.addEventListener("click", function (event) {
+    console.log(event.target);
+});
+
+Agar Button par click karoge:
+
+Output :
+<button class="delete">Delete</button>
+
+Agar LI par click karoge:
+
+Output:
+<li>Sleep</li>
+
+event.target hamesha us element ko return karta hai
+jis par actual click hua hota hai.
+
+
+==========================================================
+ADVANTAGES OF EVENT DELEGATION
+==========================================================
+
+1. Sirf ek event listener lagta hai.
+
+2. Memory kam use hoti hai.
+
+3. Dynamically create hue naye elements
+   automatically work karte hain.
+
+4. Code clean aur maintain karna easy hota hai.
+
+5. Large applications me performance better hoti hai.
+
+
+Event Delegation ka use kyo hota hai?
+1. Dynamic Elements ke liye ⭐⭐⭐⭐⭐
+
+Jo elements baad me JavaScript se bante hain.
+
+Jaise
+
+Todo App
+Chat App
+Comments
+Notifications
+
+2. Kam Event Listeners
+❌
+100 buttons
+
+↓
+
+100 listeners
+
+button1
+button2
+button3
+...
+button100
+
+✅
+
+Sirf
+
+<ul>
+
+par ek listener.
+
+Performance better hoti hai.
+
+3. Code chhota hota hai
+
+Instead of
+
+btn1.addEventListener(...)
+btn2.addEventListener(...)
+btn3.addEventListener(...)
+btn4.addEventListener(...)
+
+Sirf
+
+ul.addEventListener(...)
+Real Life Example
+
+Socho ek school me 500 students hain.
+
+❌ Har student ko alag teacher de do.
+
+Teacher1 → Student1
+Teacher2 → Student2
+Teacher3 → Student3
+...
+
+Bahut teachers chahiye.
+
+✅ Ek class teacher bana do.
+
+Teacher
+   │
+Class
+ ├── Student
+ ├── Student
+ ├── Student
+
+Jab koi student haath uthata hai, teacher dekh leta hai kisne haath uthaya.
+
+Yehi Event Delegation hai.
+
+Summary
+Normal Event Listener	Event Delegation
+Har element par listener lagta hai	Parent par ek listener lagta hai
+Dynamic elements par dobara listener lagana padta hai	Naye elements bhi automatically kaam karte hain
+Zyada memory use hoti hai	Kam memory use hoti hai
+Chhote projects me theek	Bade aur real projects me best
+*/
+
+    </script>
+</body>
+
+</html>

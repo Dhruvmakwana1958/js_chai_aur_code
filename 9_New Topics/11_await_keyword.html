@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    /*await keyword jo async vadu function hoy to ane to j kam kare*/
+    function getNum(){
+        return new Promise((resolve , reject)=>{
+            setTimeout(()=>{
+                let num = Math.floor(Math.random()*10)+1 ;
+                console.log(num);
+                resolve();
+            },2000)
+        })
+    }
+    
+    async function demo() {
+        await getNum();
+        await getNum();
+        await getNum();
+        await getNum();
+        await getNum();
+        getNum()
+        
+    }
+    demo();
+
+    // async function demo2() {
+    //     getNum();
+    //     getNum();
+    //     getNum();
+    //     getNum();
+    //     getNum(); // aa rite karva thi 2000 second pachi badha ak sate j execute thse ane badha number ak sathe j print thy jse 
+    // }
+    // demo2()
+
+
+
+
+    /*Flow dekho:
+
+getNum()
+   ↓
+Promise create
+   ↓
+setTimeout (2 seconds)
+   ↓
+Random number generate
+   ↓
+console.log(num)
+   ↓
+resolve()
+   ↓
+Promise COMPLETE ✅
+   ↓
+await aage continue karega
+Tumhare demo() me iska importance
+async function demo() { 
+    await getNum(); 
+    await getNum(); 
+    await getNum(); 
+    await getNum(); 
+    await getNum(); 
+}
+
+Pehle:
+await getNum();
+chalega.
+getNum() 2 seconds baad resolve() karega.
+Tabhi await next line par jayega.
+
+Agar resolve() hata do?
+
+Agar tum likho:
+
+setTimeout(() => {
+    let num = Math.floor(Math.random() * 10) + 1;
+    console.log(num);
+    // resolve() nahi hai
+}, 2000);
+
+to number print ho jayega, lekin Promise pending hi rahega:
+
+getNum()
+   ↓
+Promise Pending ⏳
+   ↓
+await yahin rukega
+   ↓
+next getNum() ❌
+
+Isliye resolve() yahan basically "kaam ho gaya, ab await ko aage jaane do" ka signal hai.
+
+*/
+</script>
+</html>

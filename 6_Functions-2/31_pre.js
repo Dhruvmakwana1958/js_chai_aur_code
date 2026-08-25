@@ -29,3 +29,9 @@ let obj2 = {
 
 console.log(mergeObjects(obj1, obj2));
 
+
+// console.log(...obj1 , ...obj2) //✖️
+// console.log({...obj1 , ...obj2}) //✔️
+
+// let obj3 = {...obj1 , ...obj2}
+// console.log(obj3)                 // ✔️

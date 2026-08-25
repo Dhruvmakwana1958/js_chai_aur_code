@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let student = {
+            firstName : "Dhruv",
+            lastName : "Makwana",
+
+        }
+        let fullName = function(homeTown , state){ 
+                console.log(this.firstName + " " + this.lastName  + " from " + homeTown + " , " +  state)
+            }   
+        fullName.call(student , "Dehradun" , "Uttkhand")
+
+
+        let student2 = {
+            firstName : "Sachin",
+            lastName : "Tendulkar" ,
+// ahi pan apde fullName print karava magi chiae apde jo icchvi to upar ni fullName vadi method banavi be niche student2.fullName() aa rite karavi shakvi but aa efficint nthi
+        }
+
+        //call method
+        fullName.call(student2, "Mumbai" , "Maharashtra"); //function borrowing
+
+        //apply method
+        fullName.apply(student , ["surendranagar" , "Gujarat"])
+
+        //bind method
+
+        let newstudent = fullName.bind(student2 , "ghare thi" , "ane anamika country thi che");
+        newstudent(); // aa apdne navu function j retrun kare che 
+
+        
+
+    </script>
+</body>
+</html>

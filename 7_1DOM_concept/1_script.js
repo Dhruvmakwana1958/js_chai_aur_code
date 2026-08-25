@@ -12,5 +12,7 @@ console.dir(document.body.childNodes[1]);
 window.document.body.style.background = "green";
 document.body.childNodes[3].innerText = "ABCD"
 
+console.dir(document.body)
+
 
 

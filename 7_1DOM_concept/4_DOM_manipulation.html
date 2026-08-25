@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <div>Dhruv Makwana 
+    <div>Dhruv Makwana
         <div>
             abcd
         </div>
@@ -18,20 +20,35 @@
     <h1 class="myclass">Karan rathore</h1>
     <h4 class="myclass">topic : starter code</h4>
     <p>Let's Learn about DOM</p>
-    <p >2nd paragraph</p>
-    <button id="myid">Click me</button> 
+    <p>2nd paragraph</p>
+    <button id="myid">Click me</button>
     <script>
         /* DOM manipulation
         1) tagName 
         2) innerText 
         3) inerHTML
-        4) textContent */
+        4) textContent 
+        
+        childNodes:         NodeList(7) [text, h3, text, ul, text, img, text]
+        children:           HTMLCollection(3) [h3, ul, img]
+        firstChild:         text
+        firstElementChild:  h3
+
+        innerHTML: "\n        <h3 style=\"visibility: hidden;\"><i> Dhruv Makwana <i></i></i></h3>\n        <ul>\n            <li>mango</li>\n            <li>Orange</li>\n            <li>kiwi</li>\n        </ul>\n        <img src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgdPr1sNKY1XbQBiPM42BAOoYIgekGJOlP2k8o4Tpc5g&amp;s=10\" alt=\"spider\">\n    "
+
+        innerText:  "mango\nOrange\nkiwi"
+        style
+        textcontent
+
+        parentElement
+        */
         let myD = document.querySelector("div").children;
         console.dir(myD);
 
-        
+
     </script>
 
 
 </body>
+
 </html>

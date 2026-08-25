@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+/*           PROMESES :- Object che 
+                       ‖
+                2 parametears
+                       ‖
+resolve(success) ⟪           ⟫ reject(failure)
+
+
+promises ni 2 state che fulfiled , reject ane pending vadi satate ave  je apdne console ma dekhase 
+panding state most probably setTimeOut ma jov made che jyare apde moto delay apyo hoy like 5000 no tyae promises ma pending satte jova made che
+promises ni 2 method che 
+.then() = fulfile thy gya pachi nu kam karva mate help kare
+.catch() = rejct thy gyu hoy to eni je error avi che ene catch karvanu kam kare
+     
+*/
+
+function saveToDataBase(data){
+    return new Promise((resolve , reject)=>{
+        let internetSpeed = Math.floor(Math.random()*10) + 1 ;
+        if(internetSpeed >4){
+            resolve("success : data was saved" );
+        }else{
+            reject("failure : weak connection");
+        }
+    } )
+}
+
+// let request = saveToDataBase("Apna College")
+// request
+// .then(()=>{
+//     console.log("promise was resolved")
+//     console.log(request)
+// })
+// .catch(()=>{
+//     console.log("promis rejected!!")
+//     console.log(request)
+// })
+
+//          more compact way
+
+saveToDataBase("Apna College")
+.then(()=>{
+    console.log("promise was resolved")
+})
+.catch(()=>{
+    console.log("promis rejected!!")
+})
+
+
+</script>
+</html>

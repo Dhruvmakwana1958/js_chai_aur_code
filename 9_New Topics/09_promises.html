@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Apna College</h1>
+</body>
+<script>
+    function changeColor(color, delay) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                h1 = document.querySelector("h1")
+                h1.style.color = color;
+
+                resolve("color change") // jyare pan promises no use karo tyare aa line lakhvi farjiyat che mtlb aa "resolve()" because to ane to j aagd no code run thse ane 
+                // color change thse jo result aenu resolve ave ane satte fullfield ave to j aagd na color change thy 
+            }, delay);
+        })
+    }
+
+    // let trys = changeColor("red" , 5000);
+    // console.log(trys) // have concole ma promises nu kholine jovu ema state pending dekhadse have pachi concole ma jai ne trys print karvi pachi satte jovi je fulfiled dekhadse
+
+
+    changeColor("red", 2000)
+        .then((result) => {
+            console.log("red color was completed!")
+            console.log("promise result : ", result)
+            return changeColor("orange", 2000);
+        })
+        .then((result) => {
+            console.log("orange color was completed!")
+            console.log("promise result : ", result)
+            return changeColor("green", 2000);
+        })
+        .then(() => {
+            console.log("green color was completed!")
+            return changeColor("blue", 2000);
+        })
+        .then(() => {
+            console.log("blue color was completed!")
+            return changeColor("purple", 2000);
+        })
+        .then(() => {
+            console.log("purple color was completed!")
+        })
+
+
+
+
+// This is too simple code 
+    // changeColor("red", 2000)
+    //     .then((result) => {
+    //         return changeColor("orange", 2000);
+    //     })
+    //     .then((result) => {
+    //         return changeColor("green", 2000);
+    //     })
+    //     .then(() => {
+    //         return changeColor("blue", 2000);
+    //     })
+    //     .then(() => {
+    //         return changeColor("purple", 2000);
+    //     })
+    //     .then(() => {
+    //         console.log("purple color was completed!")
+    //     })
+</script>
+
+</html>

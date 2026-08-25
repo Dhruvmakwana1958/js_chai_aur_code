@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Todo App</h1>
+    <input type="text" placeholder="Enter Your Task ">
+    <button class="add">Add Task </button>
+    <ul>
+        <li>sleep <button class="delete"> Delete</button></li>
+        <li>run <button class="delete"> Delete</button></li>
+    </ul>
+
+    <script>
+        // [29_2]
+        let h1 = document.querySelector("h1");
+        let input = document.querySelector("input");
+        let btn = document.querySelector(".add");
+        let ul = document.querySelector("ul")
+
+        btn.addEventListener("click", function()  {
+            let item = document.createElement("li")
+            item.innerText = input.value
+            ul.appendChild(item)
+            input.value = "" // apde input ma koi b text lakhvi pachi button upaar click karvi ane e task add b thy jase pan input field ma priviously written kai no rai jay
+            //mtl b ke button upar click karya pachi privious task input field ma cliear karva mate ano use thy che
+
+
+            item.append("\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"); // li ane delete button vacche space add karva
+            let dltBtn = document.createElement("button")
+            dltBtn.innerText = "Delete" // aa rite spacee mukva thi koi j faydo nthi javascript tene ignore kari dese
+            dltBtn.classList.add("delete")
+            item.appendChild(dltBtn)
+
+            let dltbts = document.querySelectorAll(".delete")
+            for(btn of dltbts){
+                btn.addEventListener("click" , function(){
+                    let par = this.parentElement;
+                    console.log(par);
+                    par.remove();
+                })
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simon — Memory Game</title>
+<style>
+  :root{
+    --bg-1:#0b0e14;
+    --bg-2:#12161f;
+    --ring:#1c2230;
+    --gold:#f2c14e;
+    --text:#e9ecf1;
+    --muted:#7c8697;
+
+    --c-green:#37d67a;
+    --c-red:#ef4b5f;
+    --c-yellow:#f2c14e;
+    --c-blue:#4a8fe7;
+  }
+
+  *{box-sizing:border-box;}
+
+  html,body{
+    height:100%;
+    margin:0;
+  }
+
+  body{
+    background:
+      radial-gradient(circle at 50% 15%, #171c27 0%, var(--bg-1) 55%),
+      var(--bg-1);
+    color:var(--text);
+    font-family:'Courier New', ui-monospace, monospace;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+    padding:24px;
+  }
+
+  .cabinet{
+    width:100%;
+    max-width:460px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+  }
+
+  .marquee{
+    text-align:center;
+  }
+
+  .marquee h1{
+    margin:0;
+    font-size:2.1rem;
+    letter-spacing:0.35em;
+    font-weight:700;
+    background:linear-gradient(90deg, var(--c-green), var(--c-blue), var(--c-yellow), var(--c-red));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    text-transform:uppercase;
+  }
+
+  .marquee p{
+    margin:6px 0 0;
+    color:var(--muted);
+    font-size:0.75rem;
+    letter-spacing:0.25em;
+    text-transform:uppercase;
+  }
+
+  .board-wrap{
+    position:relative;
+    width:min(78vw, 340px);
+    aspect-ratio:1/1;
+  }
+
+  .board{
+    position:relative;
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    background:var(--ring);
+    box-shadow:
+      0 0 0 8px var(--bg-2),
+      0 20px 50px -12px rgba(0,0,0,0.7),
+      inset 0 0 30px rgba(0,0,0,0.6);
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:1fr 1fr;
+    gap:8px;
+    padding:8px;
+    overflow:hidden;
+  }
+
+  .pad{
+    border:none;
+    cursor:pointer;
+    outline:none;
+    position:relative;
+    filter:saturate(0.75) brightness(0.55);
+    transition:filter 0.1s ease, transform 0.1s ease;
+    -webkit-tap-highlight-color:transparent;
+  }
+
+  .pad:focus-visible{
+    outline:3px solid var(--gold);
+    outline-offset:-3px;
+  }
+
+  .pad.active{
+    filter:saturate(1.3) brightness(1.35);
+  }
+
+  .pad:active{
+    transform:scale(0.97);
+  }
+
+  .pad-green{ background:var(--c-green); border-radius:100% 0 0 0; }
+  .pad-red{ background:var(--c-red); border-radius:0 100% 0 0; }
+  .pad-yellow{ background:var(--c-yellow); border-radius:0 0 0 100%; }
+  .pad-blue{ background:var(--c-blue); border-radius:0 0 100% 0; }
+
+  .center-console{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:36%;
+    height:36%;
+    background:var(--bg-2);
+    border-radius:50%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 0 0 5px var(--bg-1), inset 0 0 12px rgba(0,0,0,0.7);
+    z-index:2;
+    gap:2px;
+    pointer-events:none;
+  }
+
+  .score-label{
+    font-size:0.55rem;
+    letter-spacing:0.2em;
+    color:var(--muted);
+    text-transform:uppercase;
+  }
+
+  .score-value{
+    font-size:1.6rem;
+    font-weight:700;
+    color:var(--gold);
+    line-height:1;
+  }
+
+  .controls{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .btn{
+    background:var(--bg-2);
+    color:var(--text);
+    border:1px solid var(--ring);
+    padding:10px 20px;
+    border-radius:999px;
+    font-family:inherit;
+    font-size:0.8rem;
+    letter-spacing:0.15em;
+    text-transform:uppercase;
+    cursor:pointer;
+    transition:border-color 0.15s ease, color 0.15s ease;
+  }
+
+  .btn:hover{
+    border-color:var(--gold);
+    color:var(--gold);
+  }
+
+  .status{
+    min-height:20px;
+    font-size:0.8rem;
+    letter-spacing:0.1em;
+    color:var(--muted);
+    text-align:center;
+  }
+
+  .status.you-lost{ color:var(--c-red); }
+  .status.your-turn{ color:var(--c-green); }
+
+  @media (prefers-reduced-motion: reduce){
+    .pad, .pad:active{ transition:none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cabinet">
+  <div class="marquee">
+    <h1>Simon</h1>
+    <p>watch. remember. repeat.</p>
+  </div>
+
+  <div class="board-wrap">
+    <div class="board" id="board">
+      <button class="pad pad-green"  data-pad="green"  aria-label="Green pad"></button>
+      <button class="pad pad-red"    data-pad="red"    aria-label="Red pad"></button>
+      <button class="pad pad-yellow" data-pad="yellow" aria-label="Yellow pad"></button>
+      <button class="pad pad-blue"   data-pad="blue"   aria-label="Blue pad"></button>
+      <div class="center-console">
+        <span class="score-label">Level</span>
+        <span class="score-value" id="scoreValue">0</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="status" id="status">Press Start to begin</p>
+
+  <div class="controls">
+    <button class="btn" id="startBtn">Start</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  const pads = Array.from(document.querySelectorAll('.pad'));
+  const startBtn = document.getElementById('startBtn');
+  const statusEl = document.getElementById('status');
+  const scoreEl = document.getElementById('scoreValue');
+  const board = document.getElementById('board');
+
+  // Frequencies for each pad — gives every colour its own note
+  const NOTES = { green: 329.63, red: 261.63, yellow: 220.0, blue: 164.81 };
+
+  let sequence = [];
+  let playerStep = 0;
+  let level = 0;
+  let acceptingInput = false;
+  let audioCtx = null;
+
+  function getAudioCtx(){
+    if (!audioCtx){
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+    return audioCtx;
+  }
+
+  function playTone(color, duration = 350){
+    try{
+      const ctx = getAudioCtx();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.value = NOTES[color];
+      gain.gain.setValueAtTime(0.0001, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.25, ctx.currentTime + 0.02);
+      gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + duration / 1000);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start();
+      osc.stop(ctx.currentTime + duration / 1000 + 0.02);
+    }catch(e){ /* audio not available, ignore */ }
+  }
+
+  function flashPad(color, duration = 350){
+    const pad = pads.find(p => p.dataset.pad === color);
+    pad.classList.add('active');
+    playTone(color, duration);
+    return new Promise(resolve => {
+      setTimeout(() => {
+        pad.classList.remove('active');
+        resolve();
+      }, duration);
+    });
+  }
+
+  function sleep(ms){
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  async function playSequence(){
+    acceptingInput = false;
+    statusEl.textContent = 'Watch carefully…';
+    statusEl.className = 'status';
+    await sleep(500);
+    for (const color of sequence){
+      await flashPad(color);
+      await sleep(180);
+    }
+    playerStep = 0;
+    acceptingInput = true;
+    statusEl.textContent = 'Your turn';
+    statusEl.className = 'status your-turn';
+  }
+
+  function addRandomStep(){
+    const colors = ['green', 'red', 'yellow', 'blue'];
+    const next = colors[Math.floor(Math.random() * colors.length)];
+    sequence.push(next);
+    level++;
+    scoreEl.textContent = level;
+  }
+
+  function nextRound(){
+    addRandomStep();
+    playSequence();
+  }
+
+  function handlePadClick(color){
+    if (!acceptingInput) return;
+
+    flashPad(color, 200);
+
+    if (color === sequence[playerStep]){
+      playerStep++;
+      if (playerStep === sequence.length){
+        acceptingInput = false;
+        statusEl.textContent = 'Nice! Next level…';
+        statusEl.className = 'status';
+        setTimeout(nextRound, 700);
+      }
+    } else {
+      acceptingInput = false;
+      statusEl.textContent = `Game over — you reached level ${level}`;
+      statusEl.className = 'status you-lost';
+      startBtn.textContent = 'Restart';
+    }
+  }
+
+  pads.forEach(pad => {
+    pad.addEventListener('click', () => handlePadClick(pad.dataset.pad));
+  });
+
+  startBtn.addEventListener('click', () => {
+    sequence = [];
+    level = 0;
+    playerStep = 0;
+    scoreEl.textContent = 0;
+    startBtn.textContent = 'Restart';
+    nextRound();
+  });
+
+  // Keyboard support: 1=green 2=red 3=yellow 4=blue
+  window.addEventListener('keydown', (e) => {
+    const map = { '1': 'green', '2': 'red', '3': 'yellow', '4': 'blue' };
+    if (map[e.key]) handlePadClick(map[e.key]);
+  });
+})();
+</script>
+
+</body>
+</html>

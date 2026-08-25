@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>To Do App</h1>
+    <input type="text" placeholder="Enter Tasks">
+    <button class="add">Add</button>
+    <ul>
+        <li>run <button class="delete">delete</button></li>
+        <li>sleep <button class="delete">delete</button></li>
+    </ul>
+
+    <script>
+        let ul = document.querySelector("ul")
+        let li = document.querySelector("li")
+        let btn = document.querySelector(".add")
+        let input = document.querySelector("input")
+
+        btn.addEventListener("click" , function() {
+            let item = document.createElement("li")
+            item.innerText = input.value
+            ul.appendChild(item)
+            input.value = ""
+            item.append("\u00A0\u00A0\u00A0\u00A0")
+            let dltBtn = document.createElement("button")
+            dltBtn.classList.add("delete")
+            dltBtn.innerText = "delete"
+            item.appendChild(dltBtn);
+            ul.addEventListener("click" , function(evt){
+                if(evt.target.nodeName === "BUTTON"){
+                    evt.target.parentElement.remove();
+                    console.log("Delete")
+                }
+            })
+
+            
+        })
+    </script>
+
+</body>
+</html>

@@ -16,5 +16,5 @@ jsUser.greetingsTwo = function(){
                                               // che e jova mate aa this use karyu
 }
 
-console.log(jsUser.greetings());
-console.log(jsUser.greetingsTwo());
+jsUser.greetings();
+jsUser.greetingsTwo();

@@ -5,7 +5,7 @@ const student = {
     subject : ["Hindi" , "English" , "Maths" , "Science"] ,
     username : "dhruv@",
     pasword : "abcd" ,
-    lat_long : "SG Highway" // but if we don;t defines value in rotiginal object then value can be Gota
+    lat_long : "SG Highway" // but if we don't defines value in otiginal object then value can be Gota
 };
 
 const {username : user , subject , city = "Mumbai" , lat_long:location = "Gota"} = student; // ah apde city ne default value apeli che but jo real object ma city name ni 
