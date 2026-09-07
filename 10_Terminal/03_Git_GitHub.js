@@ -1,0 +1,1 @@
+// 34 no 1st joi levo

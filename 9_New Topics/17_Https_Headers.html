@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+   /*
+================================================================================
+                              HTTP HEADERS CHEATSHEET
+================================================================================
+
+[DEFINITION]
+  HTTP Headers client (Browser/Hoppscotch/Postman) aur Server ke beech Request 
+  ya Response ke sath extra information (Metadata) pass karne ke liye use hote hain.
+  Ye main content (Body) se alag hote hain aur batate hain ki data ko kaise handle karna hai.
+
+--------------------------------------------------------------------------------
+                           MAIN FUNCTIONS (KEY ROLES)
+--------------------------------------------------------------------------------
+  1. Data Format Batana (Content-Type / Accept)
+     - Server aur Client ko batata hai ki data kis format me bheja ya manga gaya hai.
+  
+  2. Authentication & Security (Authorization)
+     - Private APIs ko access karne ke liye API Key ya Secret Token bhejta hai.
+  
+  3. Caching Control (Cache-Control)
+     - Browser ko instructions deta hai ki data ko kitni der tak cache/save rakhna hai.
+  
+  4. Client Information (User-Agent)
+     - Server ko batata hai ki request kis browser, OS, ya tool se aa rahi hai.
+
+--------------------------------------------------------------------------------
+                            COMMONLY USED HEADERS TABLE
+--------------------------------------------------------------------------------
+  +---------------------------+----------+------------------------------------+-------------------+
+  | Header Name               | Type     | Kaam (Purpose)                     | Example Value     |
+  +---------------------------+----------+------------------------------------+-------------------+
+  | Accept                    | Request  | Client ko kis format me data chahiy| application/json  |
+  | Content-Type              | Req/Res  | Bheje gaye data ka actual format   | application/json  |
+  | Authorization             | Request  | Identity & Access Verify karna     | Bearer <token>    |
+  | User-Agent                | Request  | Client Device / App ki Detail      | Mozilla/5.0...    |
+  | Access-Control-Allow-Origin| Response | CORS Permission set karna          | * (All origins)   |
+  +---------------------------+----------+------------------------------------+-------------------+
+
+--------------------------------------------------------------------------------
+                             REAL-WORLD HTTP EXAMPLE
+--------------------------------------------------------------------------------
+  [Request Payload]:
+    GET /v1/books HTTP/1.1
+    Host: api.potterdb.com
+    Accept: application/json
+    Authorization: Bearer my_api_key_123
+
+  [Logic Breakdown]:
+    - Accept Header        -> Server ko bol raha hai: "Mujhe response JSON me hi chahiye."
+    - Authorization Header -> Server ko bol raha hai: "Main verified user hoon, ye raha mera token."
+
+================================================================================
+
+
+ak kam karo google kholo ema inspect ma jai ne have network vadu kholo have gogle ma harry potter search karo 
+apdne dekhase bav badhi individual requests jova madse tema thi koi pan ak ma click karo ane headers ma jav headers ma 2 ritna headers hoy 
+1) request headers 
+2) response headers 
+apde atyre request headers upar j kam karaisu 
+
+request headers ma aa ritni informatons jova made example for
+sec-ch-ua-platform             "Windows"
+sec-ch-ua-platform-version     "19.0.0" aa badhi apda machine ni info che je request mokalta ni sathe ave che je URL ma nthi dekhatu 
+aa badhi aditional info Headers ma jova made che
+
+
+
+NEW API = dadjokes 
+https://icanhazdadjoke.com/ aa teni link che jene apde hoppscotch ma nakhi ne send karisu je apdne alag alag jokes ape che 
+have teni andar avela headers ne apade explore karisu to te rersponse headers hase ny ke request headers 
+
+apde je ritni information joi che te ritnu apde output medvi shakiae chiae 
+
+key = Accept
+text/html - HTML response (default response format)
+application/json - JSON response
+text/plain - Plain text response
+
+je ritnu response  joi che te ritnu value ma nakhi devanu 
+*/
+</script>
+</html>

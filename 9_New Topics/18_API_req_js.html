@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let url = "https://catfact.ninja/fact"
+    //fetch(url)  inspet ma jai ne network ma jaine response ma jaisu etle aa fact jova madse
+    // fetch(url) ne jo console ma jai ne lakhvama ave to te ak promise return kare che mtlb apde then ane catch jevi method no use kari sakiae chiaea 
+    /* [[Prototype]]: Promise
+    [[PromiseState]]: "fulfilled"
+    [[PromiseResult]]: Response*/
+
+    fetch(url)
+    .then((response)=>{ // ahi then pan await jevu j kam kare jay sudhi response na ave tya sudhi wait kare jo pelu kam thy to j biju kam thy aeni jem
+        console.log(response);
+        // console.log(response.json()); // it will give promise but its state is panding and gives us object
+        /*
+        [[Prototype]]: Promise
+        [[PromiseState]]: "fulfilled"
+        [[PromiseResult]]: Object
+        */
+       return response.json();
+        
+    })
+    .then((data)=>{
+        console.log(data)
+        console.log(data.fact)
+    })
+    .catch((err)=>{
+        console.log("Error :" , err)
+    });
+    // ahi status 200 avi gyu matlb request sucefully gy but jo apde khotu url nakhyu hot example for apde url ma pachad 2 evu lagadi didhu hot to te error throw karet 
+    
+</script>
+</html>
