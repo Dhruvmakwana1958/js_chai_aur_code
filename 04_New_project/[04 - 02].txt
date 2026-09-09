@@ -1,0 +1,81 @@
+[04 - 02]
+~> Internet :- network of interconected devices jema badha computers akbija sathe connected hoy che ane ak bija sathe communicate kari sake che (koi compney je apdne internet provied
+kare che through wifi , router etc... to eno ak cable ave che apda ghar sudhi pochto hoy che bhale vah ma ocean j kem na hoy to te ocian ni nihe thi pan mota mota cables jata
+hoy che mtlb global levle upar aa ak bav moto concept kevay badah j computer aa rite ak bija sathe connected che )
+               2 bhag hoy client ane server
+	       client :- apda pc ma thi amazone m kaik search kaaryu tu apde client
+	       server :- evu computer je 24/7 chalu j re ane client ne kyare pan infromation ni jarur pade te api shake i mean data return kari shake
+	       badha j device na ak unique ip address hoy che chahe te client device hoy ke server device (amazone website vada nu server je 24/7 chalu re)
+HOW INTERNET WORKS  :
+    client ne facebook.com search karvu che mtlb kholvu che or internet no use karvo che ya to kaik brows karvu che to ae pela request jse ISP(internet service provider) (ex jio , airtel) have aa isp request moklse DNS(domain name system) (badha na ip address store hoy mtlb jo amazone search karvu cher to enu ip address dns pase hoy instagram search karyu che to ena main server nu ip address DNS pase hoy tuk ma badha na ip address ani pase hoy  )
+DNS amazone nu ip address return karse ISP ne ane ISP client ne return krse mtlb have server nu ip address client pase che to directly client server sathe communication kari shakse
+
+client --> ISP --> DNS
+  ^
+  |    <--     <--
+
+**** Nslookup.io --> badha na ip addrress dekhade like amazone , youtube ****
+
+~> Nesting :- ak ni andar biju like <p> tag ma  tag
+
+[08_12]
+~> emmet.io website :- che jema emmet downoad kari sakay but apda vs code ma already installed che ano metlb ke apde amuk vastu lakhvi
+     ane vc code ne jate j mota code ma convert lkari de ! dabavi to html nu boilerplat code avi jay
+Short form likho ➜ Tab dabao ➜ pura code automatically ban jata hai. <h1>
+div.container , <div class="container"></div>
+
+
+~> cssfontstack.com website ma badha j font family dekhadse ema thi apde choose kari sakiae
+
+[11_12 ]
+~>   Importance between element , id and class
+     id > class > element */
+
+     Importance between Descendant , element and class 
+     class > descedant > element*/
+
+[11_14]
+~> casceding :- (ak var video jovo j) same element ma same style aplle karo to prioty last apeli style upar apply thy
+h1{
+background-colour : red
+}
+
+h1{
+background-colour : Yellow
+}
+last vadi apply thse have apde 1 j index mate 2 alag file banayi hoy style1.css ane style2.css to ama jeni link last ma hse e apply thy (head tag ma link tag vadi link)
+
+~> Selector Specificity
+What is specificity?
+Specificity is an algorithm that calculates the weight that is applied to a given CSS declaration.
+
+          id                  class,attribute & psudo class                   element & psudo elements
+          ___                 _______________________________                __________________________
+          100                               10                                             0
+ex)   h2{
+         background-color: black
+        }                             code = 001 = 1
+ex 2) .myclass:hover {
+                    color:blue
+                    }                 code = 020 = 20
+
+[16_01]
+~> canva color wheel
+
+[16_01]
+~> Google fonts
+
+[19_02]
+~> console Uses REPL :- Read Evaluate Print Loop
+shortcuts :- ctr + L (cinsole clear karva)
+             ^ upwad and downword aerrow
+
+
+[20_06]
+~> badha j alphabets ane syomble na unicode hoy che ane te comparision operator thi eni value < che ke > che te nakki kari shakay 
+a < b < c < d......... value vadhti jay a > A
+↓
+A < B < C < D.........
+
+[23_02]
+const referense          

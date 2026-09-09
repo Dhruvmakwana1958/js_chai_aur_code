@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/action.php">
+        <h3> Registration Form</h3>
+        <hr>
+        <hr> <br>
+        <input type="text" placeholder="Username" value="DHRUV" name="username"> <br> <!--aa name attribute backend ma kam ma ave
+        have apde form ma username nakhyu ane submit button upar click kari su tu url pela karta alag dekhadse 
+        http://127.0.0.1:5501/action.php?username=DHRUV aa rite aavse 
+
+        URL http://127.0.0.1:5501/action.php? {ahi action.php ae action nu name che -> ? ave -> name attribute ni value -> == textbox ma
+        nakheli value je user enter kare }-->
+        <input type="password" placeholder="password"> <br>
+        <button type="submit">Submit</button>
+
+        <ul>
+            <li>
+                <h4>select your class</h4>
+            </li>
+        </ul>
+        <label for="11th">
+            <input type="radio" name="class" id="11th">class 11th<br> <!--ahi apde name ni value banne ma same rakhvinpde kem ke banne ak j group
+                                                                        ma che-->
+        </label>
+        <label for="12th">
+            <input type="radio" name="class" id="12th">class 12th <br>
+        </label>
+        <button type="submit">submit</button>
+        <!-- ahi jo apde radio ma chekk kari ne submit karsu to url ma class=on evu add thy jsse -->
+
+        <ul>
+            <li>
+                <h4>Select your favorite subject</h4>
+            </li>
+        </ul>
+        <label for="phy">
+            <input type="checkbox" name="subject" id="phy">Physics
+        </label>
+        <label for="chem">
+            <input type="checkbox" name="subject" id="chem" checked>Chemistry
+            <!--checkbox pele thi j check karelu rakhva-->
+        </label>
+        <label for="math">
+            <input type="checkbox" name="subject" id="math" value="math">Maths
+        </label>
+        <label for="Drawing">
+            <input type="checkbox" name="subject" id="Drawing" value="Drawing">Drawing
+        </label> <br> <br>
+        </label>
+        <!-- ahi jo apde checkbox ma chekk kari ne submit karsu to url ma subject=on evu add thy jsse -->
+        <!-- ahi url name=value na form ma hoy pela apde value noti api tyare subject=on lakhelu avtu but have url ma subject na name su che e 
+            pan desplay karava hoy to value attribute no use karvo pde
+             -->
+        <ul>
+            <li>Select Your City : </li>
+            <select name="city">
+                <option value="select" selected disabled>Enter city :</option> <!--ahi selected no mtlb by default select thyelu ave ane disabled mtlb
+            e option click na thy-->
+                <option value="Delhi">Delhi</option>
+                <option value="mumbai" disabled>mumbai</option>
+                <option value="gujrat">gujrat</option>
+                <option value="pune">pune</option>
+            </select> <br> <br>
+        </ul>
+
+        <ul>
+            <li>
+                <textarea name="Feedback" placeholder="Give your Feedback" id="100" rows="4"></textarea>
+            </li>
+        </ul>
+        <label for="vol">Select Your Volume Levele :</label>
+        <input type="range" name="vol" id="vol" min="0" max="100" step="10" value="60"> <!--step = value ketla ni range ma vadhse 10 20 30........
+        aya url ma vol=10 dekhadse 
+        value = By Default value apva --><br>
+        <input type="submit" value="SUBMIT"><br>
+
+
+    </form>
+</body>
+
+</html>

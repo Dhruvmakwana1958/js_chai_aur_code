@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <button>click!</button> <br> <!--Form ni bar banavela button par click karva thi koi action perform nthi thati-->
+    <form action="action">
+        <button>Submit</button><br> <!--form tag ni andar banavela button paer click karva thi je te badhi j information proper file pase jse 
+        aa case ma action.php che-->
+
+        <label for="Username">Username :</label>
+        <input type="text" id="Username" placeholder="enter your username ">
+
+        <label for="password">password :</label>
+        <input type="password" name="pass" id="password">
+
+        <!-- there are 3 types of buttons -->
+         <button type="submit">Submit</button> <!--form ni badhi j infromation submit karva-->
+         <button type="button">Hellow</button> <!-- form ma only button banava -->
+         <button type="reset">Reset</button>
+
+         <input type="button" value="click me!"> <!-- aa rite lakhi to sakay pan aa advisable nthi-->
+    </form> <br> <hr> <hr>
+    <form action="https://www.youtube.com/results" target="_blank"> <!--ahi apde youtube nu URL paste kari didhu have apde apda banvela text box    ma je kai 
+        search kari ne submit karisu te actual youtube ma search thyelu dekhadse
+        ahi apdi youtube ma app search kareli actual URL https://www.youtube.com/results?search_query=app che jema search_query ae namw attribute che
+        apde e j same name attribute n value je search_query che te aapi didhi but apde URL ma change karva padse ane apdu URL hse
+        https://www.youtube.com/results kem ke submit button upar click karva thi search_query=apple jate avi jse je URl ma add thy jse
+        (apple - apda textbox ma search karelu che e ) -->
+        <input type="text" placeholder="Search" name="search_query" >
+        <button type="submit">submit</button>
+    </form> <br> <br> <hr> <hr>
+
+    <form action="https://www.google.com/search">
+        <input type="text" name="q" placeholder="search in google">
+        <button type="submit" >Search</button>
+    </form>
+</body>
+</html>

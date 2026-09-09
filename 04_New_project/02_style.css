@@ -1,0 +1,531 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin: 0;
+    color: white;
+    overflow: hidden;
+    /* ano mtlb che apde koi pan website ma scroll karvi ane je scroll bar ave e have mani lo ke apde bav badho content 
+  didho che pan jo overflow hidden rakhisu to te scroll ny thy but apde jem ke koi perticular area mate j scrole bar create karvu che mtlb 
+  khali te j area ma scroll kari sakiae bija koi ma ny to ena mate je te section ma overflow:auto; aa property lakhvi 
+  ahi apda clone prj ma main-content ma aa vstu jova madse*/
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+    padding: 0.5rem;
+}
+
+.sidebar {
+    background-color: #000;
+    width: 400px;
+    margin-right: 0.5rem;
+}
+
+.main-content {
+    background-color: #121212;
+    flex: 1;
+    /* ano matlb ke vadhra ni jetli pan width che tene mane api do*/
+    overflow: auto;
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+
+}
+
+.music-player {
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 80px;
+}
+
+.nav {
+    background-color: #121212;
+    border-radius: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding: 0.5rem 0.75rem;
+    margin: 0.5rem 0 0.5rem 0;
+
+}
+
+.nav-option {
+    line-height: 2.5rem;
+    opacity: 0.5;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-option i {
+    font-size: 1.25rem;
+    padding-top: 0.5rem;
+}
+
+.nav-option a {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.nav-option:hover {
+    opacity: 1;
+}
+
+.library {
+    background-color: #121212;
+    border-radius: 0.7rem;
+    height: 100%;
+    padding: 0.5rem 0.75rem;
+    margin-top: 0.8rem;
+
+
+}
+
+.option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.library-option img {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.icons {
+    font-size: 1.25rem;
+    display: flex;
+
+}
+
+.icons i {
+    margin-right: 1rem;
+    opacity: 0.5;
+}
+
+.icons i:hover {
+    opacity: 1;
+}
+
+.library-option a {
+    position: relative;
+    bottom: 2px;
+}
+
+.box {
+    height: 8rem;
+    background-color: #232323;
+    border-radius: 0.75rem;
+    margin: 2rem 0 1.75rem 0;
+    padding: 0.75rem 1rem;
+}
+
+.box-p1 {
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.box-p2 {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.badge {
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 150px;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    height: 2rem;
+    width: fit-content;
+}
+
+.box p {
+    line-height: 2.4rem;
+}
+
+.stickey-nav {
+    position: sticky;
+    top: 0;
+    background-color: #232323;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+    height: 1.2rem;
+    z-index: 1000;
+}
+
+.stickey-badge1 {
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 150px;
+    padding: 0.3rem 0rem 0.3rem 0rem;
+    font-weight: 700;
+    height: 2rem;
+    width: 10rem;
+
+}
+
+.stickey-nav-options {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 35rem;
+}
+
+.stickey-badge2 {
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 150px;
+    height: 2.2rem;
+    width: 8rem;
+    display: flex;
+    /* important */
+    justify-content: center;
+    /* horizontal center */
+    align-items: center;
+    /* vertical center */
+    gap: 0.4rem;
+    /* icon-text spacing */
+    font-weight: 700;
+}
+
+.stickey-badge2 i {
+    color: white;
+    padding: 0.25rem 0;
+    font-size: 1.2rem;
+
+}
+
+.stickey-nav-icons {
+    margin-left: 1.75rem;
+    margin-top: 0.4rem;
+    display: flex;
+    justify-content: space-evenly;
+    width: 6rem;
+
+}
+
+.stickey-nav-icons:hover {
+    opacity: 1;
+}
+
+@media (max-width : 1300px) {
+    .hide {
+        display: none !important;
+    }
+}
+
+.bkd {
+    background-color: #000;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+}
+
+.op1:hover,
+.op2:hover {
+    opacity: 1;
+}
+
+.card {
+    background-color: #171616;
+    width: 190px;
+    height: 270px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+    transition: all 0.1s ease-in-out 0.1ms;
+}
+
+.card:hover {
+    opacity: 1;
+    transform: scale(1.1, 1.1);
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.cards {
+    margin: 1rem 1.5rem 0 1.5rem;
+
+
+}
+
+.cards h2 {
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+}
+
+.card-title {
+    font-weight: 700;
+}
+
+.card-info {
+    opacity: 0.6;
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+}
+
+.footer {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    width: 90%;
+    height: 50%;
+    border-top: 1px solid white;
+}
+
+/* MUSIC PLAYER */
+
+.music-player {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    background: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    border-top: 1px solid #232323;
+}
+
+
+/* LEFT */
+
+.album {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.album-img {
+    height: 55px;
+    width: 55px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.song-name {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.artist-name {
+    font-size: 0.75rem;
+    opacity: 0.6;
+    margin-top: 0.3rem;
+}
+
+.album i {
+    opacity: 0.7;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.album i:hover {
+    opacity: 1;
+}
+
+/* CENTER */
+
+.player {
+    width: 50%;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 0.7rem;
+}
+
+.player-control-icon {
+    font-size: 1rem;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.player-control-icon:hover {
+    opacity: 1;
+}
+
+.play-btn {
+    height: 2.5rem;
+    width: 2.5rem;
+    background: white;
+    border-radius: 50%;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.play-btn i {
+    color: black;
+}
+
+
+.playback-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.curr-time,
+.tot-time {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+
+.progress-bar {
+    width: 70%;
+    appearance: none;
+    background: transparent;
+}
+
+
+.progress-bar::-webkit-slider-runnable-track {
+
+    height: 4px;
+
+    background: #ddd;
+
+    border-radius: 100px;
+}
+
+.progress-bar::-webkit-slider-thumb {
+
+    appearance: none;
+
+    height: 14px;
+
+    width: 14px;
+
+    background: #1ed760;
+
+    border-radius: 50%;
+
+    margin-top: -5px;
+}
+
+
+
+/* RIGHT */
+
+.controls {
+
+    width: 25%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 1rem;
+}
+
+.controls i {
+
+    opacity: 0.7;
+
+    cursor: pointer;
+}
+
+.controls i:hover {
+
+    opacity: 1;
+}
+
+.volume {
+
+    width: 100px;
+
+    appearance: none;
+
+    background: transparent;
+}
+
+.volume::-webkit-slider-runnable-track {
+
+    height: 4px;
+
+    background: #ddd;
+
+    border-radius: 100px;
+}
+
+.volume::-webkit-slider-thumb {
+
+    appearance: none;
+
+    width: 12px;
+
+    height: 12px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    margin-top: -4px;
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:900px) {
+
+    .album {
+        width: 30%;
+    }
+
+    .controls {
+        display: none;
+    }
+
+    .player {
+        width: 70%;
+    }
+
+}

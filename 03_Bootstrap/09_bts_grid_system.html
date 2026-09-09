@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- grid system by default 12 column avela hoy che , ama continer class banavo jaruri che tayr pachi row class vado div banavo 
+     jeli row joi che etla row class banava 
+     have column devide karva mate col class no use thy che ane aa col class badha div ne equally part ma devide kare che   -->
+    <div class="container">
+        <h2>Grid System</h2>
+        <div class="row">
+            <div class="col bg-danger">one</div> <!-- class = "col"-->
+            <div class="col text-bg-secondary">two</div>
+        </div>
+    </div> <br> <hr>
+
+    <!-- containes two row -->
+    <div class="container">
+        <h2>Grid System</h2>
+        <div class="row">
+            <div class="col bg-danger">one</div> <!-- class = "col"-->
+        </div>
+        <div class="row">
+            <div class="col text-bg-secondary">two</div>
+        </div>
+
+    </div> <br> <hr>
+
+
+
+    <div class="container text-center" >
+        <div class="row">
+            <div class="col bg-danger">one</div>
+            <div class="col text-bg-secondary">two</div>
+            <div class="col bg-warning">three</div>
+        </div>
+    </div> <br> <hr>
+
+
+    <div class="container text-center" >
+        <div class="row">
+            <div class="col-4 bg-danger">one</div>   <!--apdi rite columns nakki karva je equal part ma devide ny thy-->
+            <div class="col-3 text-bg-secondary">two</div>
+            <div class="col-2 bg-warning">three</div>
+            <div class="col-1 bg-success">four</div>
+            <div class="col-2 bg-warning">five</div>
+        </div>
+    </div> <br> <hr>
+
+    <div class="container text-center" >
+        <div class="row">
+            <div class="col-sm-2 bg-danger">one</div>
+            <div class="col-sm-8 text-bg-secondary">two</div>
+            <div class="col-md-2 bg-warning">three</div> <!--768px ke tene thi upar mate 50% 50% (6 columns 6 column) rese 
+            but md karya bad je te row 100% width ocuepi karse kyare jyare size 768px thi ochi thy-->
+        </div>
+    </div> <br> <hr>
+
+
+    <!-- ahi apde evi responsivness karvi che jema xs-md ~> 100% (12 units) & md-xl ~>  50%(6 units)  &  xl-xxl ~> 3 units-->
+    <div class="row">
+        <div class="col-md-6 col-xl-4 bg-danger">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat blanditiis ipsam, aliquid quis temporibus, nihil voluptatum accusamus, ab autem debitis asperiores? Et corporis error quibusdam porro ducimus pariatur soluta iste?</div>
+        <div class="col-md-6 col-xl-4 text-bg-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat blanditiis ipsam, aliquid quis temporibus, nihil voluptatum accusamus, ab autem debitis asperiores? Et corporis error quibusdam porro ducimus pariatur soluta iste?</div>
+        <div class="col-md-6 col-xl-4 text-bg-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat blanditiis ipsam, aliquid quis temporibus, nihil voluptatum accusamus, ab autem debitis asperiores? Et corporis error quibusdam porro ducimus pariatur soluta iste?</div>
+    </div>
+
+
+    <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+  Example element with utilities
+</div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
