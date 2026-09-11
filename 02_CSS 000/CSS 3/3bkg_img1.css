@@ -1,0 +1,24 @@
+div{
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    border: 3px solid black;
+}
+body{
+    background-image: url(3d_img1.jpg);
+    background-size: cover;
+}
+#box1{
+    background-image: url(3cat_photo2.jpg);
+    background-size: cover; /*pic enlarge thai ne automaatic set thai jase*/
+}
+#box2{
+    background-image: url(3cat_photo2.jpg);
+    background-size: contain; /*This causes reapet , photo je te box ma nano thy ne set thy jase
+    but side ma khali jagya rese*/
+    background-repeat: no-repeat;
+}
+#box3{
+    background-image: url(3cat_photo2.jpg);
+    background-size: auto; /*by default aa j hoy*/
+}

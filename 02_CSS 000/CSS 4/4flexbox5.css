@@ -1,0 +1,23 @@
+.item{
+    height: 92px;
+    width: 92px;
+    background-color: blueviolet;
+    border: 2px solid black;
+    margin: 4px;
+}
+#container{
+    
+    border: 2px solid red;
+    display: flex;
+    height: 80vh;
+
+    /* if main-axis --> horizontal = ak j line ma aadu(horizontally) feravava   */
+    /* if main-axis --> vertical   = ak j line ma ubhu(vertical) feravava   */
+    justify-content:center; 
+
+    /* if cross-axis --> vertical = aadi line ne upar niche vachma kaarva */
+    /*if cross-axis --> horizontal = ubhi line ne dabe jamne vachma karva*/
+    align-items:center; 
+    
+    flex-direction: column;
+}

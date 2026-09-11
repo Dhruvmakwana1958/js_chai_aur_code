@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      height: 200px;
+      width: 200px;
+      background-color: aquamarine;
+      transition-duration: 3s;
+      transition-property: all;
+      transition-timing-function: ease;
+      position: absolute;
+      left: 250px;
+      top: 250px;
+    }
+    div:active{
+      background-color: green;
+      font-size: larger;
+      height: 200px;
+      width: 200px;
+      border: 10px groove burlywood;
+      transform: translate(500px) rotate(720deg) rotateX(360deg) rotateY(560deg) scale(1,2);
+
+      /* jo box ne rotate karavtu karavtu x axis ne along right side move karavu hoy to ena mate tarnsform property use kari eki
+      sathe j akk j line ma badha traansitions lakhva */
+    }
+  </style>
+</head>
+<body>
+  <div> this is div</div>
+</body>
+</html>

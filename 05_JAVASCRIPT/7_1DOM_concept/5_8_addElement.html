@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="5_5_classList.css">
+</head>
+
+<body>
+    <div>
+        <h3>Practice</h3>
+        <h2 class="fruits mango orange"><i>Fruits</i></h2>
+        <h3 class="fruits mango orange"><i>Avenger</i></h3>
+        <h1>Dhruv Makwana</h1>
+        <ul>
+            <li>mango</li>
+            <li>Orange</li>
+            <li>kiwi</li>
+        </ul>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQHaRWxyz39EW8N1HMNGHM-fvt9HzJFtM2DLiVxCwQ-w&s=10"
+            alt="spider" style="width: 17.75%;" id="spidy">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIMkBlxUMG37ZNpLu8aXTLZVUOCzsOSh_q6isSMs0umA&s=10"
+            alt="strange" style="width: 19.75%;" id="strenju">
+    </div>
+
+    <div class="box">
+        <h4>Publication Info</h4>
+
+        <ul>
+            <li>
+                <a href="#" class="boxLink">Publisher</a>
+            </li>
+
+            <li>
+                <a href="#" class="boxLink">First Appearance</a>
+            </li>
+
+            <li>
+                Created by
+                <ul>
+                    <li>
+                        <a href="#" class="boxLink">Stan Lee</a>
+                    </li>
+                    <li>
+                        <a href="#" class="boxLink">Steve Ditko</a>
+                        ❤️
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        let newp = document.createElement("p")
+        newp.innerText = "Hey there this is dhruv makwana"
+        console.log(newp)  // but this element is not added in our html page
+
+        // create to karyu pan have add sema karvu che ena mate jema add karvu hoy tene access kari ne tema appent kari ane te nakhi devanu 
+        let body = document.querySelector("body")
+        body.appendChild(newp)
+
+        let box = document.querySelector(".box")
+        box.appendChild(newp)  // last ma apde aa <p> ne box ni andar append karyu to mtlb te 2 var ny show thy mtlb upar je apde body tag 
+        // ma append akryu tu ema thi jatu rese ane nava update pramane .box ma avi jse
+
+        // let btn = document.createElement('button');
+        // btn.innerText = "click me"
+
+        // let steveLi = document.querySelectorAll('.box ul ul li')[1];
+        // steveLi.appendChild(btn)
+        // jya ❤️ banavyuu tya append karyu apda button ne
+
+        // OR
+
+        let mine = document.createElement('button')
+        mine.innerText = "submit"
+
+        let my = document.querySelector(".box ul").children[2].children[0].children[1]
+        my.appendChild(mine)
+
+
+        
+        let mine = document.createElement("button")
+        mine.innerText = "Modi ji"
+
+        let mine2 = document.querySelector(".box ul")[2]
+
+
+    </script>
+</body>
+
+</html>

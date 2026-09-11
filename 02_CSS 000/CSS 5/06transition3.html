@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+        
+        div{
+            height: 125px;
+            width: 125px;
+            border: 10px groove rgb(73, 25, 67);
+            margin: 20px;
+            display: inline-block;
+            background-color: lightgoldenrodyellow;
+            
+        }
+        #box1:hover{
+            transition: all 3s steps(3) 2s;
+         /* trans-property duration function delay*/   
+            background-color:steelblue;
+            text-transform:uppercase;
+            color: chocolate;
+
+
+        }
+        #box2{
+            transition: all 5s ease-out 0.5S;
+        }
+        #box2:hover{
+            transform: rotate(30deg) translateX(150px);
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">This Is Div</div>
+    <div id="box2">DHRUV</div>
+</body>
+</html>

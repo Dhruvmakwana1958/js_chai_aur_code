@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // used in objects and arrays
+        const student = {
+            name : "Dhruv Makwana" ,
+            age : 23 ,
+            cgpa : 7.5 ,
+            isfail : false
+        };
+        console.log(Object.keys(student));
+        console.log(Object.values(student));
+        for(let key in student){
+            console.log("key = ",key ," , value = ",student[key]);
+        }
+
+        console.log(student)
+
+        let myobj = new Object()
+        myobj.name = "rakesh";
+        myobj.age = 21;
+
+        console.log(myobj)
+        console.log(Object.keys(myobj))
+        
+
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+#box1{
+    height: 300px ;
+    width: 400px ;
+    background-color: burlywood ; 
+    font-size: 10px;
+    height: 50vh;
+    
+}
+/*em hamesha font releted mate use thy che ncihe apde pela 2em font size kari em no use kari ne have aa change thyeli font size na adhare
+width , height , margine and padding api sakaya*/
+#box2{
+    width: 50% ;
+    height: 70% ;
+    background-color: darkolivegreen ;
+    margin-left: 10% ;
+    font-size: 2em; /* 2 times of parent = 20px*/
+    width: 5em; /* font-size(20)*5 kai rite thyu ? 
+    box1 font-size = 10px
+    box2 font-size = 2em --> 2*10 = 20px
+    box2 width = 5em --> 5*20 = 100px
+    */
+}
+
+button{
+    font-size: 50px;
+    border-radius: 15px;
+    border: 5px solid green;
+    padding-left: 1em; /*50px (font size)*/
+    padding-right: 1em;
+    
+/* have apde padding-left:20px 
+             padding-right:20px aapi che
+have mare koi var font-size vadhrine 100px kavani thy to e case ma padding ghati jse ane jo me font 10px kari didhu to padding vadhi jse 
+but hu agvu nthi ichhato hu evu icchu chu ke jetli moti fontsixe thy etli j pading vadhe ane jo font size ochi thy to padding ghate*/
+}
+
+section{
+    font-size: 10px;
+}
+div{
+    font-size: 2em; /* drowback of em apde section ne api font-size 10 to eni andar na mtlb div1 ni 2em = 2*10px =20px 
+    have div2 2em = 2*20px = 40px....... but apde avu nthi ichhta ape icchi chiae ke only root element na adhre child ma fer far thy mtlb 
+    div1 = 20px , div2 = 20px ..... to ena mate rem no use thy che*/
+    
+    /* font-size: 2rem; aa lakhvu */
+}

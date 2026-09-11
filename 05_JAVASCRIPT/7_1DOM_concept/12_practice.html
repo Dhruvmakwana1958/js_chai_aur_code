@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .oldclass {
+            color: white;
+        }
+
+        .newclass {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="oldclass">Hey i am here!</p>
+    <script>
+        /* create a <p> tag in html , give it a class and some styling
+            Now create a new class in css and try to append this class to the <p> element
+
+                **Did you notice , how you owerwrite the class  name when you add anew one?
+                solve this problem using classList */
+        let newbtn = document.createElement("button");
+        newbtn.innerText = "click me"
+        newbtn.style.backgroundColor = "red"
+        newbtn.style.color = "white"
+        document.querySelector("body").prepend(newbtn);
+
+
+
+        let para = document.querySelector(".oldclass");
+        // para.setAttribute("class" , "newclass"); // but setAttribute karva thi newclass ni property applly to thy but oldclass ni property jati
+        // ry matlb owewrite thy gy pan jo banne property accese karvi hoy to tenu solution niche che
+
+        para.classList.add("newclass");
+
+    </script>
+</body>
+
+</html>

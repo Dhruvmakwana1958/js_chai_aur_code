@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+    <style>
+        div {
+            background-color: pink;
+            height: 200px;
+            width: 400px;
+        }
+
+        ul {
+            background-color: blue;
+        }
+
+        li {
+            background-color: greenyellow;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+    </div>
+
+    <script>
+        //event bubbling
+        let div = document.querySelector("div")
+        let ul = document.querySelector("ul")
+        let li = document.querySelector("li")
+
+        div.addEventListener("click" , (evt)=>{
+            evt.stopPropagation();
+            console.log("div was clicked")
+        })
+
+        ul.addEventListener("click" , (evt)=>{
+            evt.stopPropagation();
+            console.log("ul was clicked")
+        })
+
+        li.addEventListener("click" , (evt)=>{
+            evt.stopPropagation();
+            console.log("li was clicked")
+        })
+
+        
+    </script>
+
+</body>
+
+</html>

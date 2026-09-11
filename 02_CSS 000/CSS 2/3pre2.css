@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+#org{
+    background-color: black;
+    height: 60px;
+}
+a{
+    margin-right: 200px;
+    text-decoration: none;
+}
+#d1{
+    color: #f08804;
+    font-size: 25px;
+}
+#d3{
+    background-color: #f08804;
+}
+footer{
+    color: white;
+    text-align: center;
+    background-color: black;
+    
+}
+.contentBox{
+    height: 73px;
+    width: 100px;
+    padding-top: 27px;
+    display: inline-block;
+    text-align: center;
+    color: black;
+    border-radius: 50%;
+    margin: 5px;
+    border: 6px groove green;
+   
+}
+#content{
+    height: 628px;
+}

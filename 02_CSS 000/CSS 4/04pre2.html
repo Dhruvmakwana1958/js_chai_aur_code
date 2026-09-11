@@ -1,0 +1,63 @@
+<! DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <style>
+        #container {
+            height: 850px;
+            width: 70%;
+            background-color: azure;
+            margin: 10px auto;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-end;
+            align-content: center; /*wrap karyu hoy to tema use thy space-between, evenly , */
+            
+            
+
+         
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #container div {
+            height: 150px;
+            width: 300px;
+            color: white;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        #blue{
+            flex-basis: 600px;
+            flex-grow: 3;
+            
+
+        }
+        
+    </style>
+
+    <body>
+        <h1>Flexbox Playground</h1>
+        <div id="container">
+            <div id="violet" style="background-color:#9400d3"> violet </div>
+            <div style="background-color:#4b0082"> indigo </div>
+            <div id="blue" style="background-color:#0000ff"> blue </div>
+            <div style="background-color:#00ff00"> green </div>
+            <div id="yellow" style="background-color:#ffff00"> yellow </div>
+            <div style="background-color:#ff7f00" > orange </div>
+            <div id="rd" style="background-color:#ff0000; font-size: 3em; width: 500px; align-self: center; flex-grow: 2;" > red </div>
+        </div>
+    </body>
+
+    </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let marks = [85 , 97 , 44 , 37 , 76 , 60];
+        let sum = 0 ;
+        for(let val of marks){     
+            sum+=val ;
+            /*OR 
+        for(let val in marks){
+        sum +=marks[val];
+        }
+        */
+        }
+        let avg  = sum / marks.length;
+
+        console.log(`avg marks of class ${avg}`);
+    </script>
+</body>
+</html>

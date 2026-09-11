@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let student = {
+            firstName : "Dhruv",
+            lastName : "Makwana",
+
+            fullName : function(country , state){ // object ni andar funcyion = method
+                console.log(this.firstName + " " + this.lastName + " from " +  this.country )
+            }   
+        }
+        student.fullName()
+
+
+        let student2 = {
+            firstName : "Sachin",
+            lastName : "Tendulkar" ,
+// ahi pan apde fullName print karava magi chiae apde jo icchvi to upar ni fullName vadi method banavi be niche student2.fullName() aa rite karavi shakvi but aa efficint nthi
+        }
+        student.fullName.call(student2); //function borrowing
+    </script>
+</body>
+</html>

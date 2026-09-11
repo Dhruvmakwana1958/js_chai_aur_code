@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fixed vs Sticky Example</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Fixed Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: royalblue;
+    color: white;
+    padding: 15px 20px;
+    font-size: 18px;
+    z-index: 1000;
+  }
+
+  /* Main content with space for navbar */
+  .content {
+    margin-top: 60px;
+    padding: 20px;
+  }
+
+  /* Sticky Subheader */
+  .subheader {
+    position: sticky;
+    top: 60px; /* navbar की height के बराबर */
+    background: orange;
+    padding: 10px;
+    font-weight: bold;
+    border: 3px solid black;
+  }
+
+  .section {
+    height: 500px;
+    background: lightgray;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 20px;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Fixed Navbar -->
+  <div class="navbar">
+    🚀 My Fixed Navbar
+  </div>
+
+  <!-- Page Content -->
+  <div class="content">
+    <!-- Sticky Header -->
+    <div class="subheader">📌 I am Sticky (I will stick below the navbar while scrolling)</div>
+
+    <div class="section">Section 1: Scroll down to see sticky in action.</div>
+    <div class="section">Section 2: Sticky header stays until parent ends.</div>
+    <div class="section">Section 3: Keep scrolling...</div>
+    <div class="section">Section 4: Fixed navbar is always there.</div>
+  </div>
+
+</body>
+</html>

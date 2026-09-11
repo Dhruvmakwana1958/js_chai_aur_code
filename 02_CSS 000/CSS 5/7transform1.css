@@ -1,0 +1,41 @@
+/*      transform: rotate() 
+        scale() 
+        translate() 
+        skew() ; */
+div {
+  height: 100px;
+  width: 100px;
+  background-color: aquamarine;
+  border: 2px solid black;
+  position: absolute ;
+  top: 200px;
+  left: 300px;
+  
+/* rotate: x 180deg; */
+
+/* rotate x axis na niche thi chalu thy mtlb 45degree to jo box aadu hoy to jamni baju niche 45 degree namse 
+simplly box banvyu tyare X-Y axis upar hoy have 45 degree rotate karyyu to te x - (-y) thi nami jse 45 */
+}
+div:active {
+  /* rotate: X 270;     jo apde transition apply karvu che to transform:rotateX em use karvo pde khali rotate:X 270 use karisu to apply ny ty
+  transform: rotateY(270deg);
+   */
+  
+  background-color: red;
+  color: white;
+  font-size: 20px;
+  transform: scale(2,2);
+  /*  transform: scaleX(2);
+  transform: scaleY(3); */
+  transition: all 5s ease-in-out 5ms;
+  /* transform: rotate(720deg);
+  rotate: x 220deg; */
+  
+}
+div:active {
+  background-color: pink;
+}
+
+
+
+

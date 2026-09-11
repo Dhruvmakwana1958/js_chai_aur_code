@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        height: 100px;
+        width: 100px;
+        background-color: aquamarine;
+        border: 2px solid black;
+        position: absolute;
+        top: 200px;
+        left: 300px;
+        transition: all 2s ease-out ;
+    }
+    div:hover {
+        transform: translate(200px);
+        /* transform: translateY(-150px); */
+        /* transform: translate(120px ,-140px); */
+
+      }
+      div:active {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box1">This is box</div>
+  </body>
+</html>

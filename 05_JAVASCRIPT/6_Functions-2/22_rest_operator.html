@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sum(...ele) {
+            return ele.reduce((el1, el2) => el1 + el2) // ✔️
+        }
+        console.log(sum(1, 2, 3))
+
+
+        // function sum2() {
+        //     return arguments.reduce((el1, el2) => el1 + el2) // ✖️ argument as a array nu j collection kai skay pan apde teno use karine 
+        //     // array ni method apply kari shakta nthi
+        // }
+        // console.log(sum2(1, 2, 3))
+
+
+        // Minimum number nikalna
+        let min = (...ele) => {
+            return ele.reduce((acc, curr) =>  acc > curr ? curr : acc);
+        };
+
+        console.log(min(2, 5, 85, 50)); // 2
+
+
+        // Array ka sum nikalna
+        let arr = [1, 2, 3, 4];
+
+        let sum2 = arr.reduce(function (acc, curr) {
+            return acc + curr;
+        }, 0);
+
+        console.log(sum2); // 10
+
+    </script>
+</body>
+
+</html>

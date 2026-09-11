@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Apna College</h1>
+</body>
+<script>
+    h1 = document.querySelector("h1")
+
+
+    /*setTimeout(()=>{
+         h1.style.color = "red"
+    },1000);
+
+    setTimeout(()=>{
+         h1.style.color = "orange"
+    },2000);
+
+    setTimeout(()=>{
+         h1.style.color = "green"
+    },3000)
+    
+    OR (ana mate function j banavi dai )*/
+
+    /*function changeColor(color){
+        h1.style.color = color;
+    }
+
+    setTimeout(changeColor("red"),1000);
+    setTimeout(changeColor("orange"),2000);
+    setTimeout(changeColor("green"),3000); */
+
+    // ahi apdne eas a result green color j mdse kem ke function Asynchronously work nthi kartu to mtlb badhu ak sathe j execute thy jse
+    //je thi apdne khali last vadu j result jova madse to avu na thy ena mate apde function ni andar j timeout api dai 
+
+    /*function changeColor(color,delay){
+       setTimeout(()=>{
+           h1.style.color = color
+       },delay)
+   }
+  changeColor("red",1000)
+   changeColor("orange",2000)
+   changeColor("green",3000)*/
+    // ahi apde dependancy rakhva magi chiae jo pelu thy to biju thy evi rite
+
+
+
+    // ahi dar 1sec bad colour cahnge to thy jay che but aa rit etli pan comfertsble nthi enu karn ae che apde dar vakhte calculate karvu pdse mtlb pela 1000 didhu pachi jo apde green 
+    // karvu hoy to apde calculate karvu pddse to mtlb jo koi moto task hse to aa vastu karvi effective nthi 
+    // to apade evu kari shakiae ke 1sec bad color red thy , red thya ni 1 sec pachi orange thy jay ane orange thya na 1 sec pachi color green thy jay
+
+
+    function changeColor(color, delay, nextColorChange) {
+        setTimeout(() => {
+            h1.style.color = color;
+
+            if (nextColorChange) {
+                nextColorChange();
+            }
+        }, delay);
+    }
+
+    changeColor("red", 1000, () => {
+        changeColor("orange", 1000, () => {
+            changeColor("green", 1000, () => {
+                changeColor("yellow", 1000, () => {
+                    changeColor("purple", 1000);
+                });
+            });
+        });
+    });
+
+    // pan ama function callbacks vare ghdiye karvama ave che jeno koi mtlb nthi ane jova ma pan confsion vadu j lage che to aa phenomina ne callback-Hell kevama ave che 
+    // callback nesting = callback Hell
+
+
+</script>
+
+</html>

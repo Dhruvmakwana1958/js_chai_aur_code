@@ -1,0 +1,40 @@
+.myclass {
+    text-align: center;
+
+    
+
+}
+h1 {
+    text-decoration:line-through;
+    text-align: center;
+}
+a {
+    text-decoration:none;
+}
+#h1 {
+    font-weight:900;
+    text-decoration: blueviolet underline wavy;
+    text-underline-offset: 80px; 
+    
+}
+#h2 {
+    font-weight: bold; /* koi j change ny thy kem ke alrady heading bold j hoy */
+    
+   
+}
+#h3 {
+    font-weight: bolder;
+}
+#h4{
+    font-weight:100;
+    visibility: hidden;
+}
+#one {
+    font-family: arial;
+    text-align: center;
+}
+#two{
+    /* cssfontstack.com website che jema badha j foont family dekhadse  */
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+}

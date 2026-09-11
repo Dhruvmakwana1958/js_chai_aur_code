@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 600px;
+            height: 300px;
+            background-color:yellow;
+            display: grid; 
+            margin: 0 auto;
+            grid-template-rows: repeat(4,1fr);
+            grid-template-columns: repeat(3,1fr);
+            justify-items: center;/*horizonatly set*/
+            align-items: flex-end; /*Vertically set*/
+            /* place-items: center; horizontaly ane vertically same alignment apva  */
+        }
+        .item{
+            height: 50px;
+            width: 100px;  
+            border: 2px solid black;
+            background-color: yellowgreen;
+            text-align: center;
+        }
+
+        /* self items mate */
+        .one{
+            justify-self: flex-end;
+            align-self: flex-end;
+        }
+        .two{
+            place-self: flex-end;
+        }
+
+    </style>
+</head>
+<body>  
+    <h1 style="text-align: center;">Grid Playground</h1>
+    <div class="container">
+        <div class="item one">1</div>
+        <div class="item two">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>

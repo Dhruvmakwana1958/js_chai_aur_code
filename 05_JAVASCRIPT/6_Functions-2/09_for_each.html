@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //forEach() → Sirf har element par kaam karta hai, kuch return nahi karta (undefined return karta hai).
+
+        // forEach method ne higher order function(HOF) / higher order method(HOM) kehvama ave che
+        // array na element ne one by one print karva ane teno upyog che jem ke one by one elements ne uppercase ma priint karva
+        let arr = ["Delhi" , "Pune" , "Jarkhand" ,"Dehradun"]
+        
+        arr.forEach((val) => {
+            console.log(val.toUpperCase());
+        });
+       
+
+        /*arr.forEach( function functionname(parameter){
+            console.log(parameter)
+        })*/ // aa rite apde manually arr.foreach kari ne andar callback function mukvu pan ahi foreach no use karva mate
+        // calbackfun use karvu pde ane teno matlb ke function nu name na apvu ane parameter ma je array iterate karvo che te lkvu niche examp che
+
+        arr.forEach( function (val){
+            console.log(val.toLowerCase())
+        })
+
+        // matlb ham sirf console se hi print karva sakte hai return ka use nhi kar sakte
+   
+    </script>
+</body>
+</html>

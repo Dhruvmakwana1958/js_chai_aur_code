@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // please watch the video 
+
+        /*
+        Last in First out vado concept
+        call = function call {  hello()  }
+        stack = its a container in which calls are stores 
+        
+        when we maake a function callStack is come to our picture 
+        call stack is generaly a data structure related 
+        in our container the laast item is added that is remove firstly mtlb je data last ma add thyo te j sav thi pela remove thy 
+        
+        */
+
+        function hello() {
+            console.log("Inside hello Fnx")
+            console.log("Hello")
+        }
+
+        function Demo() {
+            console.log("Calling hello Fnx")
+            hello()
+        }
+
+        console.log("Calling Demo Fnx")
+        Demo()
+        console.log("done , Bye")
+
+        /*
+        ahi call stack ma sav thi pela Demo() add thse pachi ema biju hello function che ae add thse hello() nu kam patya pachi te fari pacha Demo ni anadr vada hello() ma avse
+        ane have tenu kam pati gyu te have stack ma thi remove thy jse ane jevu Ddemo nu kam pati jse stack ma thi aa Demo pan remove thy jse
+        */
+
+    </script>
+</body>
+
+</html>

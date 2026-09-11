@@ -1,0 +1,46 @@
+#diiiv{
+    display: inline; 
+    background-color: pink;
+}
+button{
+    display: block;
+    background-color: aquamarine;
+
+}
+#d1 {
+    height: 100px;
+    width: 100px; 
+    background-color: red;
+    margin: 25px;
+    padding: 25px; 
+    display: inline; /*inline aapva thi je te tag inline to bani jase but teni margin & padding 
+    verticaly(top bottom) set karva jasu to te ny thy ha R & L thse*/
+}
+#d2 {
+    height: 100px;
+    width: 100px; 
+    background-color: green;
+    margin: 25px;
+    padding: 25px;
+    display: inline-block; /* inline block karva thi upar vadi dificulty ny ave ama su thse inline element to bani jse ane behave karse block 
+    element ni jem j ane block element ma badhi j style , padding , margine apply kari sakay*/
+    display: none;
+}
+#d4 {
+    height: 100px;
+    width: 100px; 
+    background-color: saddlebrown;
+    margin: 25px;
+    padding: 25px;
+    display: inline-block;
+    visibility: hidden;
+}
+#d3 {
+    height: 100px;
+    width: 100px; 
+    background-color: blue;
+    margin: 25px;
+    padding: 25px;
+    display: inline-block;
+    
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer {
+            width: 40%;
+            height: 800px;
+            margin: 0 auto;
+            border: 7px solid #65A8A0;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            background-color: white;
+            align-items: center;
+            align-content: space-evenly;
+
+            flex-direction: column-reverse;
+            justify-content: space-around;
+
+        }
+
+        div {
+            height: 200px;
+            width: 200px;
+            border: 7px solid black;
+            border-radius: 10px;
+            font-size: 2em;
+            font-weight: 800;
+            text-align: center;
+            background-color: gray;
+
+        }
+
+        section {
+            height: 50px;
+            width: 900px;
+            border: 5px solid #65A8A0;
+            background-color: pink;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            margin: 5px auto;
+            align-items: center;
+            align-content: center;
+
+
+        }
+
+        .display {
+            height: 30px;
+            width: 80px;
+            background-color: white;
+            border: none;
+            border-radius: 0%;
+            font-size: 1.5em;
+            background-color: pink;
+        }
+
+        #abt {
+            order: 1;
+        }
+
+        #lg {
+            order: 3;
+        }
+
+
+
+        /*  ise order property kyo work nahi kar rhi matlb bydefaault logo 1st order pe hai aur about 3rd order pe hai to mene about ko 1st order aur logo ko 3rd dioya par change nhi huva
+
+order property work kar rahi hai, lekin tumne values aisi di hain ki visual change nazar nahi aa raha.
+
+Abhi tumhare items ka order ye hai:
+
+Logo      (order: 3)
+Home      (default order: 0)
+About     (order: 1)
+Contact   (default order: 0)
+
+Flexbox pehle sabse chhota order wale items dikhata hai.
+
+Isliye arrangement banega:
+
+Home (0)
+Contact (0)
+About (1)
+Logo (3)
+
+Agar tumhe About ko sabse pehle lana hai aur Logo ko teesre ya last position pe bhejna hai, to About ka order baaki sabse chhota rakhna padega:
+
+#abt{
+    order: -1;
+}
+
+#lg{
+    order: 3;
+}
+
+Output:
+
+About
+Home
+Contact
+Logo */
+    </style>
+</head>
+
+<body>
+    <header>
+        <section>
+            <div id="lg" class="display">Logo</div>
+            <div class="display">Home</div>
+            <div id="abt" class="display">About </div>
+            <div class="display">Contact</div>
+        </section>
+    </header>
+    <div id="outer">
+        <div id="a">A</div>
+        <div id="b">B</div>
+        <div id="c">C</div>
+        <div id="d">D</div>
+        <div id="e">E</div>
+        <div id="f">F</div>
+        <div id="g">G</div>
+        <div id="h">H</div>
+        <div id="i">I</div>
+    </div>
+</body>
+
+</html>

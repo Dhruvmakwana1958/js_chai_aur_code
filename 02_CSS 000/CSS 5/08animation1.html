@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        height: 100px;
+        width: 100px;
+        background-color: aquamarine;
+        border: 2px solid black;
+        position: absolute;
+        top: 200px;
+        left: 300px;
+        animation-name: ColorAnimate;
+        animation-duration: 1s;
+        animation-timing-function:ease ;
+        animation-delay: 0s;
+        animation-iteration-count: 2;    
+          
+    }
+    @keyframes ColorAnimate {
+        from{background-color: black;}
+        to{background-color: fuchsia;}
+    }
+    </style>
+  </head>
+  <body>
+    <div id="box1">This is box</div>
+  </body>
+</html>

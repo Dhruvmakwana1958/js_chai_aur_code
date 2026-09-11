@@ -1,0 +1,25 @@
+div{
+    font-size:30px ;
+    color: black;
+    border-width: 3px;
+    border-style: groove;
+    border-color: green;
+    border-bottom: 2px;
+    border-left-style: double;
+    border-left-color: brown;
+    border-left-width: 25px;
+ /* border-left: 25px double brown; This is shorthand */
+    border-bottom-style: double;
+    border-bottom-color:blueviolet;
+    border-bottom-width: 25px;
+    border-top-style: groove;
+    border-top-color:burlywood;
+    border-top-width: 20px;
+    border-right-style: groove;
+    border-right-color:burlywood;
+    border-right-width: 25px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    
+}

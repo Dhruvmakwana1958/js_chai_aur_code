@@ -1,0 +1,17 @@
+/*
+Math.random() Formula
+
+0 to (n-1):
+Math.floor(Math.random() * n)
+
+Example (n = 5):
+Output: 0, 1, 2, 3, 4
+
+1 to n:
+Math.floor(Math.random() * n) + 1
+
+Example (n = 6):
+Output: 1, 2, 3, 4, 5, 6
+
+universal formula = Math.floor(Math.random() * (max - min + 1)) + min;
+*/

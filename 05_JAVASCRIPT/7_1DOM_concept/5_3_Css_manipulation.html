@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h3><i>Fruits</i></h3>
+        <ul>
+            <li>mango</li>
+            <li>Orange</li>
+            <li>kiwi</li>
+        </ul>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgdPr1sNKY1XbQBiPM42BAOoYIgekGJOlP2k8o4Tpc5g&s=10"
+            alt="spider" style="width: 17.75%;" id="spidy">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIMkBlxUMG37ZNpLu8aXTLZVUOCzsOSh_q6isSMs0umA&s=10"
+            alt="strange" style="width: 19.75%;" id="strenju">
+    </div>
+
+    <div class="box">
+        <h4>Publication Info</h4>
+
+        <ul>
+            <li>
+                <a href="#" class="boxLink" style="background-color: brown;">Publisher</a> <!--ahi aa javascript thi change kareli style
+                fakt inline mate j hoy che jo tme alg thi style.css file banavi che to tema change ny thy 
+                ane jo document.queryslector('a').style karso to ema backgroundColor ma aani value brown show thse
+                but jo tme alag thi css file banavi hse to ema apeli koi pan property show ny j thy 
+                to kevano matlb ae j che ke ana thi fakt apde inlne change kari sakiae chiae -->
+            </li>
+
+            <li>
+                <a href="#" class="boxLink">First Appearance</a>
+            </li>
+
+            <li>
+                Created by
+                <ul>
+                    <li>
+                        <a href="#" class="boxLink">Stan Lee</a>
+                    </li>
+                    <li>
+                        <a href="#" class="boxLink">Steve Ditko</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script>
+        let headings = document.querySelector('h3')
+        console.dir(headings)
+        headings.style.backgroundColor = "green"
+        headings.style.color = "red"
+
+        // let links = document.querySelectorAll('.box a')
+        // links[0].style.color = "orange"
+        // links[1].style.color = "orange"  // insted of this wew can create the for loop 
+
+        let links = document.querySelectorAll('.box a')
+        for(let i = 0 ; i<links.length ; i++){
+            links[i].style.color = "orange" 
+        }
+
+// ama apde jem ke css ni property che background-color ene java script ma camelecase ma lakhva ma ave che backgroundImage , borderTopLeftRadius
+
+    </script>
+
+</body>
+
+</html>

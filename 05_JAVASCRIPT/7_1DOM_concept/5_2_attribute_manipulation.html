@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3 style="visibility: hidden;"><i>Fruits</i></h3>
+        <ul>
+            <li>mango</li>
+            <li>Orange</li>
+            <li>kiwi</li>
+        </ul>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgdPr1sNKY1XbQBiPM42BAOoYIgekGJOlP2k8o4Tpc5g&s=10" alt="spider"
+        style="width: 17.75%;" id="spidy">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIMkBlxUMG37ZNpLu8aXTLZVUOCzsOSh_q6isSMs0umA&s=10" alt="strange"
+        style="width: 19.75%;" id="strenju">
+    </div>
+    <script>
+     let attr = document.querySelector('img')
+     console.log(attr.getAttribute('id')) // class , id or (other attributes) ni value janva mate 
+     console.log(attr.getAttribute('style'))
+     attr.setAttribute('src' , 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQHaRWxyz39EW8N1HMNGHM-fvt9HzJFtM2DLiVxCwQ-w&s=10')
+    //with the use of setAttribute we can replace the image and put the image also
+
+     let attr2 = document.querySelector('#strenju')
+    attr2.setAttribute('class' , 'magic  abc') // value change karva mate ane console ma jai ne element ma jai ne joso to class add ty gyo hase
+
+
+    // apde styling mate vadhu to classList no j use kariae chiae
+    </script>
+
+</body>
+</html>

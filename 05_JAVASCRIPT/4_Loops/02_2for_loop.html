@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ahi most of progrem ma (sum = 0 & i = 0 ) vadi condition i++ thata (sum = 0 & i = 1 ) bani jay mtlb aa banne sarkha j kahevay
+      // pan aa program ma evu nahi bane jenu karan che je niche darshavel che ke -1 add thy che
+          let sum = 0;
+        for(let i = 0 ; i<=10 ; i++){
+          sum = sum + 2*i - 1 ;
+        }
+        console.log(sum);
+
+      /*i	2*i - 1
+        0         	-1 ❌
+        1         	1
+        2         	3
+        3         	5
+        4         	7
+        5         	9
+        6         	11
+        7         	13
+        8         	15
+        9         	17
+        10        	19
+
+👉 Yahan -1 extra add ho raha hai, isi wajah se sum 100 - 1 = 99 aa raha hai.*/
+    
+    </script>
+  </body>
+</html>

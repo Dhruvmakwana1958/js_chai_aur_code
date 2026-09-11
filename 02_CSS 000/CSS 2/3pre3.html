@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer {
+            height: 200px;
+            width: 200px;
+            background-color: rgb(17, 63, 124 , 0.4); /* red , green , blue , alpha(0 - 1) jo alpha = 0 to colour gayab */
+            /* usecase :- colour ni opacity set karva */
+        }
+         #inner{
+            height: 200px;
+            width: 200px;
+            background-color: rgb(17, 63, 124 );
+            opacity: 0.4;
+            /* opacity ak css property che ama colour ni opacity to change thse sathe sathe eni andar na child mtlb aa cse ma headings ane  buttons 
+            ni b opacity b change thai jse */
+
+         }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <h3>heading 3</h3>
+    </div>
+
+    <div id="inner">
+        <h3>heading 3</h3>
+        <button type="button">Click</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.outer-box {
+  width: 200px;
+  height: 200px;
+  background-color: #2e75b6; /* blue */
+  position: relative;
+}
+
+.inner-box {
+  width: 50%; /* 25% area के हिसाब से */
+  height: 50%;
+  background-color: #3b0202; /* maroon */
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+span{
+  /* display: inline-block; */
+  height: 100px;
+  width: 200px; 
+  /* ahi sapn tag ae inline element che ene height ane widht apta te lagu padt nti etle j apde ene inline block elemet banavo pdyo
+  but ha button pan inline chr pan ema hight ane width apply thy chr */
+}
+button{
+  height: 50px;
+  width: 200px;  /* height ane width etle apply thy che kem ke button by default inline-block element che*/
+}
+</style>
+</head>
+<body>
+
+<div class="outer-box">
+  <div class="inner-box"></div>
+</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, nesciunt eligendi aperiam accusamus voluptatem perspiciatis impedit animi! Numquam, a non culpa ullam delectus minus ut, maxime tenetur doloribus nobis eaque. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo laborum blanditiis in doloribus odit nam, eius <span>?DHRUV</span> porro maiores! Ab cumque itaque odio ea velit, natus eveniet debitis iure. Saepe, natus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, rem voluptatum. Aut laboriosam explicabo possimus, ab aperiam accusamus omnis totam ea saepe reiciendis laudantium eius atque, deleniti, eaque rem soluta!
+
+<button type="submit">Sumit</button></p>
+
+</body>
+</html>
+
+<!-- isme outer box ki position hame relative kyo rakhni padi matlb sirf inner box ki position absolute kareke top:0 and right:0 karke bhi yahi same chiz kar sakte na?
+
+
+ChatGPT said:
+हाँ, theoretically inner box पर सिर्फ position: absolute लगाकर भी काम करेगा —
+लेकिन ऐसा तभी होगा जब outer box (या कोई parent) पहले से positioned element हो, यानी उसका position relative, absolute, या fixed हो।
+
+अगर outer box पर position: relative नहीं लगाओगे, तो:
+
+absolute positioned element (inner box) अपने nearest positioned ancestor के हिसाब से position लेता है।
+
+अगर कोई parent positioned नहीं है, तो ये पूरे page के <html> या <body> के हिसाब से top:0, right:0 पर चला जाएगा।
+
+मतलब maroon box outer box के अंदर ना रहकर पूरे viewport के top-right corner में चला जाएगा।
+
+इसलिए:
+
+outer-box { position: relative; } लगाने से हम inner box का positioning context set कर देते हैं।
+
+फिर inner-box { position: absolute; top: 0; right: 0; } outer box के अंदर ही top-right corner पर आ जाता है।
+
+🔹 Short rule: Absolute child को उसके container के अंदर control करने के लिए container को relative करना almost हमेशा ज़रूरी है। -->

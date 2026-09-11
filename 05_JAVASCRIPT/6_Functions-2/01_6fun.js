@@ -1,0 +1,11 @@
+const addTwo = (num1 , num2) =>{
+    return num1 + num2  // EXPLICIT RETURN
+}
+//OR IMPLICIT return (jema return keyword lakhvani jarur padti nathi fakt num1 and num2 ne same line ma lakhvanu hoy che)
+const add = (num1 , num2) => ( num1 + num2)
+console.log(add(4,5));
+// curley brackets hoy to return no use thy , 
+// round hoy to return no use na karvo
+
+const adi = () => ({userName : "hitesh"}) // object ne function ma excute karvo hoy to pela round bracket pachhi curley lagavi sakay
+console.log(adi())
