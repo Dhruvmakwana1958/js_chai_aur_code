@@ -148,10 +148,12 @@ Case 3 : commited changes (for many commits)]
             •-> git log -n 3 → sirf last 3 commits
             •-> git log --oneline → commits ko short format me dikhata hai
       }
-•-> 
+•-> git reset <commit hash>    = D thi B upar avi jaisu 
+•-> git reset -- hard <- commit hash ->  = B pachi na commites delete marva je apdne na dekhay aagd jata tena mate 
+to ana thi je te changes kari ne commits karya che ae commit to dur thase jode jode te change pan jata rese       
 
 
-SPECIAL NOTE :- Isme sirf wahi files commit hoti hain jo already staged hain. 
+SPECIAL NOTE :- Isme (git commit -am "Discription") sirf wahi files commit hoti hain jo already staged hain. 
 Staged :--      git add . ->  STAGED -->  git commit -m "message" -->  COMMITTED
 (Maan lo tumne index.html me kuch change kiya:
 index.html
@@ -179,9 +181,67 @@ karoge to staged changes commit ho jayenge.)
  Modified → git add → Staged → git commit → Committed
 
 
-      
-  
-}
+---------------> FORKING <--------------- 
+What is Forking?
+• A fork is a new repository that shares code and visibility settings with the original "upstream"
+repository.
+• Fork is a rough copy.
+(node name ni koi ni banaveli repo che tema change karvu che have apdne directly edit option na mde to tena mate fork karvu pade
+fork karva node nam ni repo search karoo tene open karo ane upar fork no option avse tema jav
+have apda account ma navi repo banva mate option ave evi j rite jemm apde koi navi repo banai tayre options ave have je name devu hoy
+te dyo ane pachi niche option avse Copy the main branch only {mtlb khali main branch j copy thy but apde evu nthi karvu
+apde badhi branch sahit joi che etle te option ne uncheck kari dyo 
+now create a fork upar click karo})
+
+have apde tema koi pan file ma change kari sahkiae chiae example for apde readme ma change karyu ane commit karyu
+have apde te change je authorized node che tene moklva mate pool request create karvi pde to te create karo
+
+base repository: nodejs/node🔻   base: main🔻    <--   head repository: delta-student-101/node🔻   compare: main🔻
+
+{aa evu keva mage che ke Dhruvmakwna-node vadi repo che teni main branch ne node js ni je official repo che teni main branch sathe
+have ama apde file ne kya moklvi che te selet karvana options pan ave che }
+
+
+
+
+   ===================== GIT CLONE vs GITHUB FORK =====================
+
+ Git Clone:
+ → GitHub Repository ko Local Computer par copy karta hai.
+ → Git command hai.
+
+    git clone <repository-URL>
+
+    GitHub Repo
+         ↓ clone
+    Local Computer
+    Git Fork:
+    → Kisi aur ki GitHub Repository ki copy apne GitHub Account me banata hai.
+    → GitHub feature hai.
+   
+       Original Repo
+            ↓ fork
+       Your GitHub Repo
+   
+   
+    Main Difference:
+    → Clone = GitHub → Local Computer      → Fork  = GitHub → Your GitHub Account
+   
+    Clone aur Fork SAME nahi hain.
+    Lekin dono ko saath me use kiya ja sakta hai:
+         Original Repo
+              ↓ Fork
+         Your GitHub Repo
+              ↓ Clone
+         Local Computer
+              ↓ Push
+         Your GitHub Repo
+     
+  Short Trick:
+ →Fork  = GitHub par apni copy
+ →Clone = Computer par local copy
+       
+}     
 
 
 
