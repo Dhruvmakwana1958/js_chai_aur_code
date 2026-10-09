@@ -9,10 +9,11 @@
 }
 #two{
     text-transform: uppercase;
-    font-size: 40px;
-    
-    
+    font-size: 40px;   
 }
 h1{
-    letter-spacing: 10px;
+    letter-spacing: 15px;
+}
+h2{
+    word-spacing: 20px; 
 }

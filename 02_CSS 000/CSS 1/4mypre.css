@@ -20,7 +20,7 @@ Special → []  :  ::*/
 /* Descendant Selectors */
 nav ul li a {
     background-color: fuchsia;
-    color: rgb(2, 47, 47);
+    color: white;
 }
 /* OR  
 nav a {
@@ -29,16 +29,16 @@ nav a {
 } */
 
 nav ul li {
-    color: rgb(187, 255, 70);
+    color: rgb(255, 175, 70);
 }
 
 .myclass span a {
-    background-color: rgb(170, 201, 201);
+    background-color: rgb(5, 35, 35);
 }
 
 /* Adjacent sibling combinator :- siblings elements mate use thy mtlb niche na example pramane p pachina tart j immidiatly avta h3 tag upar 
 style apply karva */
-p + h3 {
+#p + h3 {
     text-decoration: underline wavy brown 3px;
     text-underline-offset: 5px;
 }
@@ -48,13 +48,13 @@ h2 + button{
 }
  
 h2 + button + h5 + button{
-    background-color: yellowgreen;
+    background-color: chocolate;
 } 
 
 /* Child Combinator :- parent-child vacche pareent pachi na tart avta child mate use thy */
 
-div > input{
-    background-color: gray;
+div > input {
+    background-color: blueviolet;
 }
 
 /* ahi pela example ma nav pachi a use kari lidhu je valid che pab aya evu ny chale */
@@ -63,9 +63,9 @@ div > input{
 
 /* value daine */
 input[type="text"] {
-    background-color: rgb(1, 107, 72);
+    background-color: rgb(149, 229, 203);
 }
-input[type="password"] {
+#pass[type="password"] {
     height: 30px;
 }
 
@@ -81,8 +81,6 @@ input[placeholder]{
 
 /* Importance between Descendant , element and class 
     class > descedant > element*/
-
-
 
 /* Pseudo Class : hover , onclick...... */
 
@@ -138,5 +136,20 @@ ex 2) .myclass:hover {
 ~> Selectors upar hover karta selectors ni specificity show thse  
 ~> if specificity was same then it depends the stylling on cascading  
   
+*/
+
+/*
+| Selector                       | Weight | Example             |
+| ------------------------------ | -----: | ------------------- |
+| Inline CSS                     | `1000` | `style="color:red"` |
+| ID `#`                         |  `100` | `#box`              |
+| Class `.`                      |   `10` | `.box`              |
+| Attribute `[]`                 |   `10` | `[type="text"]`     |
+| Pseudo-class `:`               |   `10` | `:hover`            |
+| Element                        |    `1` | `p`, `div`, `h1`    |
+| Pseudo-element `::`            |    `1` | `::before`          |
+| Universal `*`                  |    `0` | `*`                 |
+| Combinators ` `, `>`, `+`, `~` |    `0` | `div > p`           |
+
 */
 

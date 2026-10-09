@@ -1,9 +1,4 @@
-.myclass {
-    text-align: center;
 
-    
-
-}
 h1 {
     text-decoration:line-through;
     text-align: center;
@@ -14,6 +9,8 @@ a {
 #h1 {
     font-weight:900;
     text-decoration: blueviolet underline wavy;
+    /* text-decoration: dashed underline overline;
+    text-decoration: solid underline purple 4px; */
     text-underline-offset: 80px; 
     
 }

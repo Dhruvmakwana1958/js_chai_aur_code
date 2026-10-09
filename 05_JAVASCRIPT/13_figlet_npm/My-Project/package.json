@@ -1,0 +1,12 @@
+{
+  "name": "dhruvpro",
+  "version": "1.0.0",
+  "description": "this is my own project",
+  "license": "ISC",
+  "author": "Dhruv Makwana",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

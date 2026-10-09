@@ -4,11 +4,10 @@ body{
 div{
     height: 100px;
     width: 100px;
-    display:inline-block;
     border: 9px groove black;
 }
 h1{
-    border: 3px solid rebeccapurple;
+    border: 3px dotted rebeccapurple;
 }
 #container{
     border: 9px groove green;
@@ -19,11 +18,9 @@ h1{
     /* flex-direction: row-reverse; */
     /* flex-direction: column; */
     /* flex-direction: column-reverse; */
-
-    
     margin: 0 auto;
-   
 }
+
 #box1{
     background-color: #670D2F;
 }
@@ -39,3 +36,19 @@ h1{
 #box5{
     background-color: #6E8E59;
 }
+
+
+/*
+align-items
+
+Line 1 → [1] [2] [3]
+          ↑   ↑   ↑
+       individual items
+
+align-content
+
+Line 1 → [1] [2] [3]
+Line 2 → [4] [5] [6]
+          ↑
+     dono lines ka GROUP
+*/

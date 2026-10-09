@@ -19,6 +19,12 @@ width , height , margine and padding api sakaya*/
     box2 font-size = 2em --> 2*10 = 20px
     box2 width = 5em --> 5*20 = 100px
     */
+
+
+    /*
+    margin: %   → containing (parent )block ki width
+    padding: %  → containing (parent ) block ki width
+    */
 }
 
 button{
@@ -28,8 +34,9 @@ button{
     padding-left: 1em; /*50px (font size)*/
     padding-right: 1em;
     
-/* have apde padding-left:20px 
-             padding-right:20px aapi che
+/* have apde 
+padding-left:20px 
+padding-right:20px aapi che
 have mare koi var font-size vadhrine 100px kavani thy to e case ma padding ghati jse ane jo me font 10px kari didhu to padding vadhi jse 
 but hu agvu nthi ichhato hu evu icchu chu ke jetli moti fontsixe thy etli j pading vadhe ane jo font size ochi thy to padding ghate*/
 }

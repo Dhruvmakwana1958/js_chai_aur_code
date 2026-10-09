@@ -10,8 +10,19 @@
       p {
         color: blue; /*using style tag */
       }
-      #user::placeholder{
-        color: blueviolet;
+      #user[placeholder]{
+        background-color: darkblue;   /* ana thi input field select thse*/
+        
+      } 
+
+      #user2::placeholder{
+        color: darkblue;  /* ana thi aa proper placehoolder che teno color change thse */
+        font-size: 30px;
+        background-color: burlywood;
+      }
+      #user2[placeholder]{
+        height: 100px;
+        width: 300px;
       }
     </style>
 
@@ -21,7 +32,9 @@
     <p>I am learning CSS</p>
     <h2> Hello from Dhruv</h2>
     <label for="user">username : </label>
-    <input type="text" placeholder="enter the username style" id="user" style="color: rgb(230, 23, 23);  background-color: lightblue;">
+    <input type="text" placeholder="enter the username style" id="user" > <br> <hr>
+    <label for="user2">username : </label>
+    <input type="text" placeholder="enter the username style" id="user2" style="color: rgb(230, 23, 23);  background-color: lightblue;">
 
     <button>Click Me !</button>
   </body>

@@ -5,7 +5,6 @@
 button{
     display: block;
     background-color: aquamarine;
-
 }
 #d1 {
     height: 100px;
@@ -13,7 +12,8 @@ button{
     background-color: red;
     margin: 25px;
     padding: 25px; 
-    display: inline; /*inline aapva thi je te tag inline to bani jase but teni margin & padding 
+    display: inline;
+    /*  inline aapva thi je te tag inline to bani jase but teni margin & padding 
     verticaly(top bottom) set karva jasu to te ny thy ha R & L thse*/
 }
 #d2 {
@@ -41,6 +41,5 @@ button{
     background-color: blue;
     margin: 25px;
     padding: 25px;
-    display: inline-block;
-    
+    display: inline-block;   
 }

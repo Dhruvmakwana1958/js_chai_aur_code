@@ -1,6 +1,8 @@
 #out{
-   background-color: black;
+   background-color: white;
    width: 140px;
+   border: 15px groove black;
+   background-color: black;
 }
 #d1{
    height: 100px;
