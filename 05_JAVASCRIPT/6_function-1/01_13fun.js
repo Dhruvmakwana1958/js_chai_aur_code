@@ -17,7 +17,7 @@ printHelloo = function(){
 }
 
 // ahi aa ak let a = "Dhruv" 
-// aa rite j work kare cche bs ama koi value store karvai jagya ae function nakhi didhu che 
+// aa rite j work kare che bs ama koi value store karvai jagya ae function nakhi didhu che 
 // jem apde variable ni value change kari sakiae chiae ae j rite function ni pan value change kari sakay
 
 printHelloo()

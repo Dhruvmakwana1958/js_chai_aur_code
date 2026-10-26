@@ -18,7 +18,7 @@ console.log(regularUser.fullname.userFullName);
 
 let obj1 = {1 : "a" , 2 : "b"};
 let obj2 = {
-    3 : "c" , 
+    3 : "c" ,    
     4 : "d"
 };
 

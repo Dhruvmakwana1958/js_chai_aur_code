@@ -1,37 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        let a = 5 ; 
-        let b = 6 ;
+        let a = 5;
+        let b = 6;
 
-        let con1 = b > a ; //true
-        let con2 = a== 5 ; //ture
-        console.log("con1 && con2 = ",con1 && con2); //     ---> true
+        let con1 = b > a; //true
+        let con2 = a == 5; //ture
+        console.log("con1 && con2 = ", con1 && con2); //     ---> true
 
         // true && true = true
         // true && false = false
         // false && true = false
         // false && false = false
 
-        let con3 = b<a ; //false
-        let con4 = b==10 ; //false
-        console.log("con1 || con3 = ",con1 || con2); //     ---> true
-        console.log("con3 || con4 = ",con3 || con4); //     ---> false
+        let con3 = b < a; //false
+        let con4 = b == 10; //false
+        console.log("con1 || con3 = ", con1 || con2); //     ---> true
+        console.log("con3 || con4 = ", con3 || con4); //     ---> false
 
         // true && true = true
         // true && false = true
         // false && true = true
         // false && false = false
 
-        console.log("!(b<a) = ",!(b<a));             //     ---> true
+        console.log("!(b<a) = ", !(b < a));             //     ---> true
+
+
+        /*
+        typeof	                            Data type check	                                typeof "Hello" → "string"
+        instanceof	                    Prototype relationship check	                    [] instanceof Array → true
+        in	                            Object mein property check	                        "age" in student
+
+    const student = {
+    name: "Dhruv",
+    age: 20
+    };
+
+    console.log(typeof student);       // "object"
+    cosole.log("age" in student);     // true
+    console.log([] instanceof Array);  // true
+        */
 
 
     </script>
 </body>
+
 </html>

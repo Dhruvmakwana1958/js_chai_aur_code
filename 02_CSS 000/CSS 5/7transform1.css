@@ -10,8 +10,7 @@ div {
   position: absolute ;
   top: 200px;
   left: 300px;
-  
-/* rotate: x 180deg; */
+/* transform: rotateX(45deg); */
 
 /* rotate x axis na niche thi chalu thy mtlb 45degree to jo box aadu hoy to jamni baju niche 45 degree namse 
 simplly box banvyu tyare X-Y axis upar hoy have 45 degree rotate karyyu to te x - (-y) thi nami jse 45 */
@@ -24,10 +23,13 @@ div:active {
   background-color: red;
   color: white;
   font-size: 20px;
-  transform: scale(2,2);
-  /*  transform: scaleX(2);
-  transform: scaleY(3); */
-  transition: all 5s ease-in-out 5ms;
+  transform: scale(2,2);  /*X ane Y banne sathe j increse thse*/
+
+  /* transform: scaleX(2); 
+  transform: scaleY(3);  */ /* ahi pela scaleX(2) ane scaleY(3); apyu to ahi khalli scaleY vadi j aply thse kem ke sav thi chelli e j che banne apply ny thy*/
+  
+  transition: all 5s ease-in-out 5ms; /*ane jo div{} ni andar ayu hot to mose ne chodya pach pan smooth effect dekhat but ya tart j badlai chr */
+  
   /* transform: rotate(720deg);
   rotate: x 220deg; */
   
@@ -35,6 +37,23 @@ div:active {
 div:active {
   background-color: pink;
 }
+
+/*
+1. Translate — Move karna
+translate(), translateX(), translateY(), translateZ(), translate3d()
+
+2. Rotate — Ghumana
+rotate(), rotateX(), rotateY(), rotateZ(), rotate3d()
+
+3. Scale — Size badhana ya ghatana
+scale(), scaleX(), scaleY(), scaleZ(), scale3d()
+
+4. Skew — Shape ko tilt karna
+skew(), skewX(), skewY()
+
+
+
+*/
 
 
 

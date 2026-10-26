@@ -15,3 +15,4 @@ function largerElements(arr, num) {
 let arr = [10, 25, 8, 40, 15];
 
 console.log(largerElements(arr, 20));
+

@@ -19,7 +19,7 @@
     position: absolute;
     left: 16px;
     line-height: 60px;
-    transition: all 5ms ease-in-out 0.02ms;
+    transition: all 5ms linear 0.02ms;
     /* cursor: pointer; ahi apde cursor pointer apyu che pan te work nathi kartu karan ke te sidebar_menu niche jatu ryu che  */
     
 }

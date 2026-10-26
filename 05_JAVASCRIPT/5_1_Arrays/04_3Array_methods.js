@@ -11,10 +11,10 @@ let num3 = 300;
 console.log(Array.of(num1 , num2 , num3))
 
 let items = ["ferrari" , "audi" , "bmw" , "mercidiese"] 
-items.sort()
-console.log(items) // gives change 
+// items.sort()
+console.log(items.sort()) // gives change 
 
-let num = [22 , 55 , 89 ,78 ,5] ;
+let num = [22 , 55 , 89 ,78 ,5];
 num.sort();
 console.log(num) ; // its not give expected result 
 

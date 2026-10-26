@@ -69,15 +69,15 @@ console.log(obj3)
 
 // 6. Function Arguments
 
-function add(a,b,c){
-    return a+b+c;
+function add(a,b,c,d,e,f,g,h){
+    return a+b+c+d+e+f+g;
 }
 
-let nums = [10,20,30];
+let nums = [10,20,30,40,50,60,70];
 console.log(add(...nums));
 
 // Internally
-// add(10,20,30)
+// add(10,20,30,40,50,60,70)
 
 
 // 7. String → Character Array

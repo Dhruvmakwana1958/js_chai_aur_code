@@ -7,7 +7,7 @@ let val ;
 val1 = null ?? 10 ?? 20
 
 console.log(val1)
- 
+
 /*Nullish colescing Operator ??: kya hai
 
 Nullish Coalescing Operator ?? ka use hota hai:

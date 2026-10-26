@@ -14,6 +14,7 @@ jsUser.greetings = function(){
 jsUser.greetingsTwo = function(){
     console.log(`hey js users i am ${this.namee}`) // ahi this tyare use thy jyare same oject ne reference karvo hoy ane aa jsUser ma su su property 
                                               // che e jova mate aa this use karyu
+    console.log(`this is the week of ${this.lastLoginDays}`)
 }
 
 jsUser.greetings();

@@ -6,12 +6,13 @@ const jsUser = {
     age: 18,
     email: "dhruvmakwana@gmail.com",
     isLogedIn: false,
-    null : d , // ahi object ma null as a string ave che na ke as a datatype
-    undefined : e ,
+    // null : d , // ahi object ma null as a string ave che na ke as a datatype
+    // undefined : e ,
     lastLoginDays: ["monday", "tuesday", "friday"],
     [mysim]: "uniqueid" // syomble define karva 
     // ChatGpt search :- object me syomble data type ko kese define kare
 }
+ 
 
 // object ma koi pan ne print karavi hoy to sav thi pela te tene strig(namee , null , isLogedIn) ma convert kare che pachi value match
 //  kare che ane pachi expected result mde

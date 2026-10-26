@@ -19,7 +19,7 @@
         console.log(myDate.toTimeString()); //01:15:13 GMT+0530 (India Standard Time)
         console.log(myDate.toLocaleString()); // 2/20/2026, 1:12:32 AM
         console.log(myDate.toLocaleDateString()); // 2/20/2026
-        console.log(myDate.toLocaleTimeString());
+        console.log(myDate.toLocaleTimeString()); 
         console.log(myDate.getDay());
         /*0 = Sunday
           1 = Monday
@@ -35,13 +35,15 @@
 
         console.log(myDate.toLocaleString("default", {
             weekday: "long" ,// ctrl + space devathi propertys show thy jse
-            minute:"2-digit"
+            minute:"2-digit",
+            dayPeriod : "long",
+            
 
         }))
 
 
         //apde create kareli date show karva
-        let myCreatedDate = new Date(2023, 1, 23); // ahi month nu starting 0 thi thy to jo 0 lakhisu to january dekhadse , 11 karvi to december 
+        let myCreatedDate = new Date(2002, 7, 21); // ahi month nu starting 0 thi thy to jo 0 lakhisu to january dekhadse , 11 karvi to december 
         // YY / MM / DD vado concept hoy che
         console.log(myCreatedDate.toDateString());
 
@@ -52,7 +54,8 @@
         console.log(indian.toLocaleString())
 
         console.log(indian.toLocaleString("default", {
-            weekday: "long"
+            weekday: "long",
+            
         }))
 
 
@@ -69,6 +72,7 @@
             year: "numeric"
         }))
 
+   
     </script>
 </body>
 

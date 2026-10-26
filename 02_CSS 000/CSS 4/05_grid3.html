@@ -13,9 +13,13 @@
             margin: 0 auto;
             grid-template-rows: repeat(4,1fr);
             grid-template-columns: repeat(3,1fr);
-            justify-items: center;/*horizonatly set*/
-            align-items: flex-end; /*Vertically set*/
+            justify-items: center;/* horizonatly set */
+            align-items: flex-end; /* Vertically set */
             /* place-items: center; horizontaly ane vertically same alignment apva  */
+            /* display: inline-grid;
+               display: inline-flex */ /*ahi flex ane grid block element che mtlb have teni niche lakhelu span tag niche thi start thse
+               but apde tene te j line ma lakhva mate aa property no use thy che  
+            */
         }
         .item{
             height: 50px;
@@ -24,6 +28,7 @@
             background-color: yellowgreen;
             text-align: center;
         }
+
 
         /* self items mate */
         .one{
@@ -45,5 +50,6 @@
         <div class="item">4</div>
         <div class="item">5</div>
     </div>
+    <span>this is a new item</span>
 </body>
 </html>

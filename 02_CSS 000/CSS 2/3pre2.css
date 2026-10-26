@@ -45,11 +45,11 @@ footer{
     
 }
 /* 
-content-box
+box-sizing : content-box
 → width/height = content only
 → padding + border extra
 
-border-box
+box-sizing : border-box
 → width/height = content + padding + border
 → total size fixed
 
